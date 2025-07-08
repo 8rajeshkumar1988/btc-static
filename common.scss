@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;    
     font-family: "Inter", sans-serif;
+    line-height: 1.5;
 }
 
 :root {
@@ -17,8 +18,10 @@
   --secondaryBlack: #3b3b3b;
   --tertiaryBlack: #3b3b3b99;
   --green: #d4ff32;
-  --blue: #2f2874;
+  --blue: #342C7E;
   --padd: 10%;
+  --headingTop: 15px;
+  --navBtn: 70px;
 }
 
 .heroBanner{
@@ -43,7 +46,8 @@
                 font-size: var(--font-46);
                 font-weight: 400;
                 color: #fff;
-                margin-top: 15px;
+                margin-top: var(--headingTop);
+                // line-height: 100%;
             }
             p{
                 font-size: 20px;

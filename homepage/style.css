@@ -1,1 +1,97 @@
-/*# sourceMappingURL=style.css.map */
+#aboutBtc {
+  background-color: #fffff4;
+  width: 100%;
+  position: relative;
+  padding: 150px var(--padd) 150px;
+}
+#aboutBtc .worldMap {
+  position: absolute;
+  top: 150px;
+  right: 0;
+  width: 80%;
+  height: calc(100% - 300px);
+}
+#aboutBtc .content {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  position: relative;
+}
+#aboutBtc .content .headNum p {
+  font-size: var(--font-20);
+  color: var(--tertiaryBlack);
+  font-weight: 700;
+  font-size: bold;
+}
+#aboutBtc .content .headNum h2 {
+  font-size: var(--font-46);
+  font-weight: 400;
+  color: var(--secondaryBlack);
+  margin-top: var(--headingTop);
+}
+#aboutBtc .content .sliderAbout {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  gap: 30px;
+}
+#aboutBtc .content .sliderAbout .slides_about {
+  background-color: #fff;
+  border: 1px solid #d9d9d9;
+  padding: 30px;
+}
+#aboutBtc .content .sliderAbout .slides_about .tiles {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+#aboutBtc .content .sliderAbout .slides_about .tiles > div:first-child {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+#aboutBtc .content .sliderAbout .slides_about .tiles > div:first-child .number {
+  font-size: calc(var(--font-46) * 1.5);
+  font-weight: 700;
+  color: var(--blue);
+}
+#aboutBtc .content .sliderAbout .slides_about .tiles > div:first-child .tag {
+  font-size: var(--font-20);
+  color: var(--secondaryBlack);
+  background-color: #E4E4E4;
+  padding: 10px 20px;
+}
+#aboutBtc .content .sliderAbout .slides_about .tiles > div:last-child p {
+  font-size: var(--font-20);
+  color: var(--tertiaryBlack);
+  font-weight: 300;
+}
+#aboutBtc .content .sliderAbout .slides_about .tiles > div:last-child p span {
+  color: var(--secondaryBlack);
+}
+#aboutBtc .content .sliderAbout .navigation_about {
+  display: flex;
+  gap: 15px;
+}
+#aboutBtc .content .sliderAbout .navigation_about button {
+  padding: 15px;
+  height: 70px;
+  width: 70px;
+  background-color: #fff;
+  border: 1px solid #d9d9d9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#aboutBtc .content .sliderAbout .navigation_about button img {
+  height: 100%;
+  width: 100%;
+}
+#aboutBtc .content .sliderAbout .navigation_about .prev img {
+  transform: rotate(180deg);
+}
+#aboutBtc .cta {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}/*# sourceMappingURL=style.css.map */
