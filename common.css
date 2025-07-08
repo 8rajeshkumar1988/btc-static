@@ -18,4 +18,40 @@
   --tertiaryBlack: #3B3B3B99;
   --green: #D4FF32;
   --blue: #2F2874;
+  --padd: 10%;
+}
+
+.heroBanner {
+  position: relative;
+  height: 95vh;
+  width: 100%;
+}
+.heroBanner > video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.heroBanner .content {
+  padding: 50px var(--padd);
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.heroBanner .content > div h1 {
+  font-size: var(--font-46);
+  font-weight: 400;
+  color: #fff;
+}
+.heroBanner .content > div p {
+  font-size: 20px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.6);
+}
+.heroBanner .content .breadcrub {
+  font-size: var(--font-20);
+  color: rgba(255, 255, 255, 0.6);
 }/*# sourceMappingURL=common.css.map */
