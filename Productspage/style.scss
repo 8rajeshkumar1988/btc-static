@@ -1,12 +1,16 @@
+.heroBanner img{
+  object-position: center top;
+}
 #product_page_details {
   position: relative;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  padding:var(--padd);
-  gap: 40%;
+  padding: var(--padd);
+  gap: clamp(3.25rem, -55.4597rem + 72.2581vw, 31.25rem);
   & > img {
     position: absolute;
     inset: 0;
+    object-position: center 33%;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -15,15 +19,72 @@
   h2 {
     font-size: var(--font-46);
     line-height: 1.5;
+    font-weight: 300;
+    span {
+      font-weight: 500;
+      color: var(--blue);
+    }
   }
   .description {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 20px;
+    align-items: flex-end;
+    gap: 40px;
     p {
       font-size: var(--font-20);
+      line-height: 1.5;
     }
 
   }
+}
+#product_category{
+  .product_category_text{
+    padding: 0 var(--padd);
+    p{
+      font-size: var(--font-20);
+      line-height: 1.5;
+      color: var(--tertiaryBlack);
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    h2{
+      font-size: var(--font-46);
+      line-height: 1.5;
+      font-weight: 400;
+      color: var(--secondaryBlack);
+      margin-top: var(--headingTop);
+    }
+  }
+  .category_container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    padding: 20px 0px;
+    margin-bottom: 200px;
+    .category_card{
+      position: relative;
+      max-height: clamp(25rem, -1.2097rem + 32.2581vw, 37.5rem);
+      video{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 1024px) {
+  #product_page_details {
+    grid-template-columns: 1fr;
+    & > img {
+      display: none;
+    }
+    .description {
+      align-items: flex-start;
+    }
+  }
+  
 }
