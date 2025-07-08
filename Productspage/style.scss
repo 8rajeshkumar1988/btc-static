@@ -2,9 +2,9 @@
   position: relative;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  padding: 10% 10%;
+  padding:var(--padd);
   gap: 40%;
-  img {
+  & > img {
     position: absolute;
     inset: 0;
     width: 100%;
@@ -24,14 +24,6 @@
     p {
       font-size: var(--font-20);
     }
-    button{
-      all: unset;
-      background-color: var(--green);
-      color: #000;
-      padding: 15px 40px;
-      text-transform: uppercase;
-      font-size: var(--font-20);
-      width: fit-content;
-    }
+
   }
 }
