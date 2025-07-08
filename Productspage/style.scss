@@ -41,20 +41,7 @@
 #product_category{
   .product_category_text{
     padding: 0 var(--padd);
-    p{
-      font-size: var(--font-20);
-      line-height: 1.5;
-      color: var(--tertiaryBlack);
-      font-weight: 700;
-      text-transform: uppercase;
-    }
-    h2{
-      font-size: var(--font-46);
-      line-height: 1.5;
-      font-weight: 400;
-      color: var(--secondaryBlack);
-      margin-top: var(--headingTop);
-    }
+    
   }
   .category_container{
     display: grid;

@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
+  line-height: 1.5;
 }
 
 :root {
@@ -17,8 +18,10 @@
   --secondaryBlack: #3b3b3b;
   --tertiaryBlack: #3b3b3b99;
   --green: #d4ff32;
-  --blue: #2f2874;
+  --blue: #342C7E;
   --padd: 10%;
+  --headingTop: 5px;
+  --navBtn: 70px;
 }
 
 .heroBanner {
@@ -45,7 +48,7 @@
   font-size: var(--font-46);
   font-weight: 400;
   color: #fff;
-  margin-top: 15px;
+  margin-top: var(--headingTop);
 }
 .heroBanner .content > div p {
   font-size: 20px;
@@ -75,4 +78,19 @@
 .cta img {
   width: 20px;
   height: 20px;
+}
+
+.heading p {
+  font-size: var(--font-20);
+  line-height: 1.5;
+  color: var(--tertiaryBlack);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.heading h2 {
+  font-size: var(--font-46);
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--secondaryBlack);
+  margin-top: var(--headingTop);
 }/*# sourceMappingURL=common.css.map */

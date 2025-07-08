@@ -45,20 +45,6 @@
 #product_category .product_category_text {
   padding: 0 var(--padd);
 }
-#product_category .product_category_text p {
-  font-size: var(--font-20);
-  line-height: 1.5;
-  color: var(--tertiaryBlack);
-  font-weight: 700;
-  text-transform: uppercase;
-}
-#product_category .product_category_text h2 {
-  font-size: var(--font-46);
-  line-height: 1.5;
-  font-weight: 400;
-  color: var(--secondaryBlack);
-  margin-top: var(--headingTop);
-}
 #product_category .category_container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
