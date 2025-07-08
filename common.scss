@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;    
     font-family: "Inter", sans-serif;
+    font-weight: 400;
 }
 
 :root{
@@ -32,7 +33,7 @@
         object-fit: cover;
     }
     .content{
-        padding: 50px var(--padd);
+        padding: 150px var(--padd) 50px;
         position: relative;
         height: 100%;    
         display: flex;
@@ -43,7 +44,8 @@
                 font-size: var(--font-46);
                 font-weight: 400;
                 color: #fff;
-            }
+                margin-top: 12px;
+            }            
             p{
                 font-size: 20px;
                 font-weight: 700;
