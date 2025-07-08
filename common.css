@@ -8,7 +8,7 @@
 }
 
 :root {
-  --font-46: 46px;
+  --font-46: clamp(2rem, 0.1653rem + 2.2581vw, 2.875rem);
   --font-20: 20px;
   --font-24: 24px;
   --font-14: 14px;
