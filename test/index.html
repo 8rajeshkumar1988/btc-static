@@ -2,165 +2,165 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Spiral Animation</title>
-  <style>
-    body {
-      margin: 0;
-      overflow-x: hidden;
-      background: #f3f3f3;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 200vh;
-    }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spiral Animation</title>
+    <style>
+        body {
+            margin: 0;
+            overflow-x: hidden;
+            background: #f3f3f3;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 200vh;
+        }
 
-    .container {
-        margin: 0 auto;
-      position: relative;
-      width: 80vw;
-      height: 100vh;
-      overflow: hidden;
-    }
+        .container {
+            margin: 0 auto;
+            position: relative;
+            width: 80vw;
+            height: 100vh;
+            overflow: hidden;
+        }
 
-    .swirl-img {
-      position: absolute;
-      width: 400px;
-      aspect-ratio: 3/4;
-      object-fit: cover;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-    }
+        .swirl-img {
+            position: absolute;
+            width: 400px;
+            aspect-ratio: 3/4;
+            object-fit: cover;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
 
-    .controls {
-      position: fixed;
-      top: 20px;
-      z-index: 1000;
-      display: flex;
-      gap: 10px;
-    }
+        .controls {
+            position: fixed;
+            top: 20px;
+            z-index: 1000;
+            display: flex;
+            gap: 10px;
+        }
 
-    button {
-      padding: 10px 20px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-  </style>
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 
 <body>
-  <div class="controls">
-    <button id="swirlButton">Start Swirl</button>
-    <button id="resetButton">Reset</button>
-  </div>
+    <div class="controls">
+        <button id="swirlButton">Start Swirl</button>
+        <button id="resetButton">Reset</button>
+    </div>
 
-  <div class="container">
-    <img src="../assets/activeRange.png" class="swirl-img" />
-    <img src="../assets/kidsWear.png" class="swirl-img" />
-    <img src="../assets/category_item.png" class="swirl-img" />
-    <img src="../assets/category_item2.png" class="swirl-img" />
-    <img src="../assets/category_item3.png" class="swirl-img" />
-    <img src="../assets/category_item4.png" class="swirl-img" />
-    <img src="../assets/category_item5.png" class="swirl-img" />
-  </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<script>
-  const images = document.querySelectorAll('.swirl-img');
-  const container = document.querySelector('.container');
-  const containerWidth = container.offsetWidth;
-  const containerHeight = container.offsetHeight;
+    <div class="container">
+        <img src="../assets/activeRange.png" class="swirl-img" />
+        <img src="../assets/kidsWear.png" class="swirl-img" />
+        <img src="../assets/category_item.png" class="swirl-img" />
+        <img src="../assets/category_item2.png" class="swirl-img" />
+        <img src="../assets/category_item3.png" class="swirl-img" />
+        <img src="../assets/category_item4.png" class="swirl-img" />
+        <img src="../assets/category_item5.png" class="swirl-img" />
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script>
+        const images = document.querySelectorAll('.swirl-img');
+        const container = document.querySelector('.container');
+        const containerWidth = container.offsetWidth;
+        const containerHeight = container.offsetHeight;
 
-  const centerIndex = Math.floor(images.length / 2);
+        const centerIndex = Math.floor(images.length / 2);
 
-  let swirlTimeline;
+        let swirlTimeline;
 
-  // Fixed directions for scattered images (for rest)
- const fixedPaths = [
-  { x: -1300, y: -1200 }, // top-left
-  { x: -800, y: -1400 },  // top-left shallow
-  { x: -1400, y: 0 },     // direct left
-  { x: -1300, y: 1200 },  // bottom-left
+        // Fixed directions for scattered images (for rest)
+        const fixedPaths = [
+            { x: -1300, y: -1200 }, // top-left
+            { x: -800, y: -1400 },  // top-left shallow
+            { x: -1400, y: 0 },     // direct left
+            { x: -1300, y: 1200 },  // bottom-left
 
-  { x: 1300, y: -1200 },  // top-right
-  { x: 800, y: -1400 },   // top-right shallow
-  { x: 1400, y: 0 },      // direct right
-  { x: 1300, y: 1200 },   // bottom-right
+            { x: 1300, y: -1200 },  // top-right
+            { x: 800, y: -1400 },   // top-right shallow
+            { x: 1400, y: 0 },      // direct right
+            { x: 1300, y: 1200 },   // bottom-right
 
-  { x: 0, y: -1600 },     // straight top
-  { x: 0, y: 1600 },      // straight bottom
-  { x: -900, y: 1600 },   // bottom-left outward
-  { x: 900, y: 1600 }     // bottom-right outward
-];
+            { x: 0, y: -1600 },     // straight top
+            { x: 0, y: 1600 },      // straight bottom
+            { x: -900, y: 1600 },   // bottom-left outward
+            { x: 900, y: 1600 }     // bottom-right outward
+        ];
 
 
-  // Initial stacked setup
-  function setInitialLayout() {
-    images.forEach((img, index) => {
-      const offset = index - centerIndex;
-      const scale = 1 - Math.abs(offset) * 0.1;
-      const xOffset = offset * 60;
+        // Initial stacked setup
+        function setInitialLayout() {
+            images.forEach((img, index) => {
+                const offset = index - centerIndex;
+                const scale = 1 - Math.abs(offset) * 0.1;
+                const xOffset = offset * 60;
 
-      gsap.set(img, {
-        x: xOffset,
-        y: 0,
-        scale: scale,
-        rotation: 0,
-        zIndex: 100 - Math.abs(offset),
-        
-      });
-    });
-  }
+                gsap.set(img, {
+                    x: xOffset,
+                    y: 0,
+                    scale: scale,
+                    rotation: 0,
+                    zIndex: 100 - Math.abs(offset),
+                });
+            });
+        }
 
-  setInitialLayout();
+        setInitialLayout();
 
-  document.getElementById('swirlButton').addEventListener('click', () => {
-    // Avoid replaying if already played
-    if (swirlTimeline && swirlTimeline.progress() === 1) return;
+        document.getElementById('swirlButton').addEventListener('click', () => {
+            // Avoid replaying if already played
+            if (swirlTimeline && swirlTimeline.progress() === 1) return;
 
-    swirlTimeline = gsap.timeline();
+            swirlTimeline = gsap.timeline();
 
-    images.forEach((img, index) => {
-      const isCenter = index === centerIndex;
-      const isRightNext = index === centerIndex + 1;
+            images.forEach((img, index) => {
+                const isCenter = index === centerIndex;
+                const isRightNext = index === centerIndex + 1;
 
-      if (isCenter) {
-        swirlTimeline.to(img, {
-          x: -containerWidth / 2 + img.offsetWidth / 2 + 40,
-          y: 0,
-          scale: 1,
-          
-        }, 0); // all animations start together (at time = 0)
-      } else if (isRightNext) {
-        swirlTimeline.to(img, {
-          x: containerWidth / 2 - img.offsetWidth / 2 - 40,
-          y: 0,
-          scale: 1,
-          
-        }, 0);
-      } else {
-        const pathIndex = (index < centerIndex) ? index : index - 2;
-        const path = fixedPaths[pathIndex % fixedPaths.length];
+                if (isCenter) {
+                    swirlTimeline.to(img, {
+                        x: -containerWidth / 2 + img.offsetWidth / 2 + 40,
+                        y: 0,
+                        scale: 1,
 
-        swirlTimeline.to(img, {
-          x: path.x,
-          y: path.y,
-          scale: 0.9,
-        //   rotation: 30 * (pathIndex + 1),
-          
-        }, 0);
-      }
-    });
-  });
+                    }, 0); // all animations start together (at time = 0)
+                } else if (isRightNext) {
+                    swirlTimeline.to(img, {
+                        x: containerWidth / 2 - img.offsetWidth / 2 - 40,
+                        y: 0,
+                        scale: 1,
+                    }, 0);
+                } else {
+                    const pathIndex = (index < centerIndex) ? index : index - 2;
+                    const path = fixedPaths[pathIndex % fixedPaths.length];
 
-  document.getElementById('resetButton').addEventListener('click', () => {
-    if (swirlTimeline) {
-      swirlTimeline.reverse();
-    }
-  });
-</script>
+                    swirlTimeline.to(img, {
+                        x: path.x,
+                        y: path.y,
+                        scale: 0.9,
+                        //   rotation: 30 * (pathIndex + 1),
+                        duration: 1,
+                    }, 0);
+                }
+            });
+        });
+
+        document.getElementById('resetButton').addEventListener('click', () => {
+            if (swirlTimeline) {
+                swirlTimeline.reverse();
+            }
+        });
+    </script>
 
 </body>
 
