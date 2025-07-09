@@ -87,7 +87,7 @@
   font-weight: 700;
   text-transform: uppercase;
 }
-.heading h2 {
+.heading h2, .heading h3, .heading h4 {
   font-size: var(--font-46);
   line-height: 1.5;
   font-weight: 400;
