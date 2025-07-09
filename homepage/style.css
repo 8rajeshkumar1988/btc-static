@@ -98,6 +98,7 @@
 
 #ourProducts {
   background-color: #fff;
+  padding-bottom: 50px;
 }
 #ourProducts .heading {
   padding: 150px var(--padd) 50px;
@@ -196,16 +197,26 @@
 }
 
 #sustainabiltyStandard {
+  background-color: #fffff4;
   display: grid;
   grid-template-columns: 47% 48%;
   gap: 5%;
   padding: 150px var(--padd) 150px;
   align-items: center;
+  position: relative;
+}
+#sustainabiltyStandard .back_svg {
+  position: absolute;
+  height: 100%;
 }
 #sustainabiltyStandard .leftContent {
   display: flex;
   flex-direction: column;
   gap: 50px;
+  position: relative;
+}
+#sustainabiltyStandard .accordian {
+  position: relative;
 }
 #sustainabiltyStandard .accordian .faq {
   border-bottom: 1px solid grey;
@@ -226,22 +237,25 @@
   transition: all 0.3s;
 }
 #sustainabiltyStandard .accordian .faq .head p {
-  font-size: var(--font20);
+  font-size: var(--font-24);
   color: var(--text-color);
-  letter-spacing: 0.06em;
-  line-height: 1.5;
+  font-weight: 300;
 }
 #sustainabiltyStandard .accordian .faq .ans {
   padding-right: 30px;
   display: none;
 }
-#sustainabiltyStandard .accordian .faq .ans p {
-  color: #8A8A8A;
-  font-size: var(--font20);
-  word-spacing: 0.1em;
-  letter-spacing: 0.06em;
-  line-height: 1.5;
+#sustainabiltyStandard .accordian .faq .ans p, #sustainabiltyStandard .accordian .faq .ans li {
+  color: var(--tertiaryBlack);
+  font-size: var(--font-20);
   padding-top: 3%;
+  font-weight: 300;
+}
+#sustainabiltyStandard .accordian .faq .ans p span, #sustainabiltyStandard .accordian .faq .ans li span {
+  color: var(--secondaryBlack);
+}
+#sustainabiltyStandard .accordian .faq .ans ul, #sustainabiltyStandard .accordian .faq .ans ol {
+  padding-left: 1.2rem;
 }
 #sustainabiltyStandard .accordian .faq.default-open .head .open {
   transform: rotateX(180deg);

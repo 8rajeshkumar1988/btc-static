@@ -106,7 +106,7 @@
 
 #ourProducts{
     background-color: #fff;
-    
+    padding-bottom: 50px;
     .heading{        
         padding: 150px var(--padd) 50px;
     }
@@ -213,17 +213,25 @@
 
 
 #sustainabiltyStandard{
+    background-color: #fffff4;
     display: grid;
     grid-template-columns: 47% 48%;
     gap: 5%;
     padding: 150px var(--padd) 150px;
     align-items: center;
+    position: relative;
+    .back_svg{
+        position: absolute;
+        height: 100%;
+    }
     .leftContent{
         display: flex;
         flex-direction: column;
         gap: 50px;
+        position: relative;
     }
      .accordian{
+        position: relative;
         .faq{
             border-bottom: 1px solid grey;
             padding: max(20px, 4%) 0;
@@ -242,22 +250,25 @@
                     transition: all 0.3s;
                 }
                 p{
-                    font-size: var(--font20);
+                    font-size: var(--font-24);
                     color: var(--text-color);
-                    letter-spacing: 0.06em;
-                    line-height: 1.5;
+                    font-weight: 300;
                 }
             }
             .ans{
                 padding-right: 30px;
                 display: none;
-                p{
-                    color: #8A8A8A;
-                    font-size: var(--font20);
-                    word-spacing: 0.1em;
-                    letter-spacing: 0.06em;
-                    line-height: 1.5;
+                p, li{
+                    color: var(--tertiaryBlack);
+                    font-size: var(--font-20);                    
                     padding-top: 3%;
+                    font-weight: 300;
+                    span{
+                        color: var(--secondaryBlack);
+                    }
+                }
+                ul, ol{
+                    padding-left: 1.2rem;
                 }
             }
         }
