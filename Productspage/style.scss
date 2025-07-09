@@ -1,3 +1,6 @@
+body{
+  background-color: #FFFFF4;
+}
 .heroBanner img {
   object-position: center top;
 }
@@ -68,6 +71,7 @@
 }
 #category_listing {
   padding: var(--padd);
+  background-color: #fff;
   .category_list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -75,6 +79,7 @@
     margin-top: 40px;
     .category_list_card {
       .category_list_card_img {
+        display: block;
         aspect-ratio: 526/450;
         overflow: hidden;
         img {
@@ -83,7 +88,8 @@
       }
       .category_list_card_detail {
         margin-top: 20px;
-        h2 {
+        .category_list_card_title {
+          text-decoration: none;
           font-size: var(--font-46);
           line-height: 1.5;
           text-transform: uppercase;
@@ -108,7 +114,7 @@
       }
     }
     .category_list_card:nth-child(2) {
-      h2 {
+      .category_list_card_title {
         color: #ddbb91;
       }
       .category_tags {
@@ -118,7 +124,7 @@
       }
     }
     .category_list_card:nth-child(3) {
-      h2 {
+      .category_list_card_title {
         color: #63c7ff;
       }
       .category_tags {
@@ -128,7 +134,7 @@
       }
     }
     .category_list_card:nth-child(4) {
-      h2 {
+      .category_list_card_title {
         color: #553f2f;
       }
       .category_tags {
@@ -139,7 +145,7 @@
       }
     }
     .category_list_card:nth-child(5) {
-      h2 {
+      .category_list_card_title {
         color: #8e5947;
       }
       .category_tags {
@@ -150,7 +156,7 @@
       }
     }
     .category_list_card:nth-child(6) {
-      h2 {
+      .category_list_card_title {
         color: #00c9d9;
       }
       .category_tags {
@@ -234,6 +240,7 @@
 #customization{
   position: relative;
   padding: var(--padd);
+  background-color: #fff;
   overflow: hidden;
   & > img{
     width: 100%;
@@ -242,10 +249,13 @@
     transform: rotate(270deg) translate(10%,-10%);
     inset: 0;
     // object-fit: cover;
-    z-index: -1;
+    z-index: 0;
+  }
+  .heading{
+    position: relative;
   }
   .customization_container{
-    
+    position: relative;
     .customization_buttons{
       display: flex;
       margin: 40px 0px;

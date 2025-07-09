@@ -1,3 +1,7 @@
+body {
+  background-color: #FFFFF4;
+}
+
 .heroBanner img {
   -o-object-position: center top;
      object-position: center top;
@@ -70,6 +74,7 @@
 
 #category_listing {
   padding: var(--padd);
+  background-color: #fff;
 }
 #category_listing .category_list {
   display: grid;
@@ -78,6 +83,7 @@
   margin-top: 40px;
 }
 #category_listing .category_list .category_list_card .category_list_card_img {
+  display: block;
   aspect-ratio: 526/450;
   overflow: hidden;
 }
@@ -87,7 +93,8 @@
 #category_listing .category_list .category_list_card .category_list_card_detail {
   margin-top: 20px;
 }
-#category_listing .category_list .category_list_card .category_list_card_detail h2 {
+#category_listing .category_list .category_list_card .category_list_card_detail .category_list_card_title {
+  text-decoration: none;
   font-size: var(--font-46);
   line-height: 1.5;
   text-transform: uppercase;
@@ -109,33 +116,33 @@
   padding: 8px 20px;
   font-weight: 300;
 }
-#category_listing .category_list .category_list_card:nth-child(2) h2 {
+#category_listing .category_list .category_list_card:nth-child(2) .category_list_card_title {
   color: #ddbb91;
 }
 #category_listing .category_list .category_list_card:nth-child(2) .category_tags p {
   background-color: #ddbb91;
 }
-#category_listing .category_list .category_list_card:nth-child(3) h2 {
+#category_listing .category_list .category_list_card:nth-child(3) .category_list_card_title {
   color: #63c7ff;
 }
 #category_listing .category_list .category_list_card:nth-child(3) .category_tags p {
   background-color: #afd7ff;
 }
-#category_listing .category_list .category_list_card:nth-child(4) h2 {
+#category_listing .category_list .category_list_card:nth-child(4) .category_list_card_title {
   color: #553f2f;
 }
 #category_listing .category_list .category_list_card:nth-child(4) .category_tags p {
   color: #fff;
   background-color: #ce9e78;
 }
-#category_listing .category_list .category_list_card:nth-child(5) h2 {
+#category_listing .category_list .category_list_card:nth-child(5) .category_list_card_title {
   color: #8e5947;
 }
 #category_listing .category_list .category_list_card:nth-child(5) .category_tags p {
   color: #fff;
   background-color: #8e5947;
 }
-#category_listing .category_list .category_list_card:nth-child(6) h2 {
+#category_listing .category_list .category_list_card:nth-child(6) .category_list_card_title {
   color: #00c9d9;
 }
 #category_listing .category_list .category_list_card:nth-child(6) .category_tags p {
@@ -217,6 +224,7 @@
 #customization {
   position: relative;
   padding: var(--padd);
+  background-color: #fff;
   overflow: hidden;
 }
 #customization > img {
@@ -224,7 +232,13 @@
   position: absolute;
   transform: rotate(270deg) translate(10%, -10%);
   inset: 0;
-  z-index: -1;
+  z-index: 0;
+}
+#customization .heading {
+  position: relative;
+}
+#customization .customization_container {
+  position: relative;
 }
 #customization .customization_container .customization_buttons {
   display: flex;
