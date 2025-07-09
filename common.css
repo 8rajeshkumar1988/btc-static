@@ -93,4 +93,30 @@
   font-weight: 400;
   color: var(--secondaryBlack);
   margin-top: var(--headingTop);
+}
+
+#our_clients .heading {
+  padding: var(--padd);
+  padding-bottom: 0;
+}
+#our_clients .marquee-container {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  padding-bottom: var(--padd);
+}
+#our_clients .marquee-track {
+  display: flex;
+  width: -moz-max-content;
+  width: max-content;
+  margin: clamp(3.125rem, 2.75rem + 1.875vw, 5rem) 0px;
+}
+#our_clients .marquee-content {
+  display: flex;
+}
+#our_clients .marquee-content img {
+  height: clamp(2.5rem, 2rem + 2.5vw, 5rem);
+  margin-right: clamp(2.5rem, 2rem + 2.5vw, 5rem);
+  -o-object-fit: contain;
+     object-fit: contain;
 }/*# sourceMappingURL=common.css.map */
