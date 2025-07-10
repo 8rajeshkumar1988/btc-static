@@ -1,0 +1,173 @@
+body {
+  background-color: #fffff4;
+}
+
+#about_btc {
+  padding: var(--padd) 0px;
+  padding-bottom: 0;
+  position: relative;
+  & > img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    z-index: -1;
+    transform: translate(0%, -25%);
+  }
+  .about_btc_head {
+    padding: 0px var(--padd);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .heading {
+      h2 {
+        color: var(--secondaryBlack);
+      }
+    }
+  }
+  .about_btc_button_container{
+    padding: 40px var(--padd);
+    display: flex;
+    justify-content: flex-end;
+  }
+  .about_btc_buttons {
+    display: flex;
+    gap: 15px;
+    button {
+      padding: 15px;
+      height: var(--navBtn);
+      width: var(--navBtn);
+      background-color: #d4ff32;
+      border: 0px solid #d9d9d9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        height: 100%;
+        width: 100%;
+        opacity: 1;
+      }
+    }
+    button.swiper-button-disabled {
+      background-color: #e4e4e4;
+      img {
+        opacity: 0.4;
+      }
+    }
+    .about_btc-prev {
+      img {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  .about_btc_container {
+    margin-top: 40px;
+
+    .about_btc {
+      .category_item {
+        padding: clamp(1.25rem, 1rem + 1.25vw, 2.5rem);
+        // border: 1px solid;
+        background-color: #FFFFFF;
+        .category_image {
+          width: 100%;
+          aspect-ratio: 526/450;
+          position: relative;
+          overflow: hidden;
+          display: block;
+          & > img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            inset: 0;
+          }
+          p {
+            white-space: nowrap;
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+          }
+        }
+        .category_description {
+          margin: 40px 20px;
+          margin-bottom: 0;
+          text-decoration: none;
+          font-size: var(--font-20);
+          line-height: 1.5;
+          font-weight: 300;
+          color: var(--tertiaryBlack);
+          display: block;
+        }
+      }
+
+     
+    }
+  }
+}
+
+#vision_mission {
+  padding: var(--padd);
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto auto;
+  gap: 40px;
+  align-items: center;
+}
+
+.vision_mission_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+.vision_mission_container:first-child {
+ grid-area: 1 / 2 / 2 / 3;
+}
+
+.vision_mission_container h2 {
+  font-size: var(--font-46);
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--secondaryBlack);
+  margin-bottom: 20px;
+}
+
+.vision_mission_container p {
+  font-size: var(--font-20);
+  line-height: 1.5;
+  color: var(--tertiaryBlack);
+  font-weight: 300;
+}
+
+.vision_mission_container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+
+@media screen and (max-width: 768px) {
+  
+  #about_btc {
+    .about_btc_buttons {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  #vision_mission {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .vision_mission_container {
+    width: 100%;
+  }
+}

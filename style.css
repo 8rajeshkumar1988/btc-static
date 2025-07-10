@@ -1,0 +1,262 @@
+#aboutBtc {
+  background-color: #fffff4;
+  width: 100%;
+  position: relative;
+  padding: 150px var(--padd) 150px;
+}
+#aboutBtc .worldMap {
+  position: absolute;
+  top: 150px;
+  right: 0;
+  width: 80%;
+  height: calc(100% - 300px);
+}
+#aboutBtc .content {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  position: relative;
+}
+#aboutBtc .content .headNum p {
+  font-size: var(--font-20);
+  color: var(--tertiaryBlack);
+  font-weight: 700;
+  font-size: bold;
+}
+#aboutBtc .content .headNum h2 {
+  font-size: var(--font-46);
+  font-weight: 400;
+  color: var(--secondaryBlack);
+  margin-top: var(--headingTop);
+}
+#aboutBtc .content .sliderAbout {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  gap: 30px;
+}
+#aboutBtc .content .sliderAbout .slides_about {
+  background-color: #fff;
+  border: 1px solid #d9d9d9;
+  padding: 30px;
+}
+#aboutBtc .content .sliderAbout .slides_about .tiles {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+#aboutBtc .content .sliderAbout .slides_about .tiles > div:first-child {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+#aboutBtc .content .sliderAbout .slides_about .tiles > div:first-child .number {
+  font-size: calc(var(--font-46) * 1.5);
+  font-weight: 700;
+  color: var(--blue);
+}
+#aboutBtc .content .sliderAbout .slides_about .tiles > div:first-child .tag {
+  font-size: var(--font-20);
+  color: var(--secondaryBlack);
+  background-color: #E4E4E4;
+  padding: 10px 20px;
+}
+#aboutBtc .content .sliderAbout .slides_about .tiles > div:last-child p {
+  font-size: var(--font-20);
+  color: var(--tertiaryBlack);
+  font-weight: 300;
+}
+#aboutBtc .content .sliderAbout .slides_about .tiles > div:last-child p span {
+  color: var(--secondaryBlack);
+}
+#aboutBtc .content .sliderAbout .navigation_about {
+  display: flex;
+  gap: 15px;
+}
+#aboutBtc .content .sliderAbout .navigation_about button {
+  padding: 15px;
+  height: var(--navBtn);
+  width: var(--navBtn);
+  background-color: #fff;
+  border: 1px solid #d9d9d9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#aboutBtc .content .sliderAbout .navigation_about button img {
+  height: 100%;
+  width: 100%;
+}
+#aboutBtc .content .sliderAbout .navigation_about .prev img {
+  transform: rotate(180deg);
+}
+#aboutBtc .cta {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+#ourProducts {
+  background-color: #fff;
+  padding-bottom: 50px;
+}
+#ourProducts .heading {
+  padding: 150px var(--padd) 50px;
+}
+#ourProducts .content {
+  overflow: hidden;
+}
+#ourProducts .content .ourProducts {
+  height: calc(clamp(23.75rem, 8.0357rem + 24.5536vw, 37.5rem) + 150px);
+  overflow: unset;
+}
+#ourProducts .content .ourProducts > .swiper-wrapper {
+  height: calc(clamp(23.75rem, 8.0357rem + 24.5536vw, 37.5rem) + 150px);
+}
+#ourProducts .content .ourProducts .items.swiper-slide-active > div {
+  height: calc(clamp(23.75rem, 8.0357rem + 24.5536vw, 37.5rem) + 150px);
+}
+#ourProducts .content .ourProducts .items.swiper-slide-active > div p {
+  opacity: 1;
+}
+#ourProducts .content .ourProducts .items.swiper-slide-active > p {
+  opacity: 0;
+}
+#ourProducts .content .ourProducts .items > div {
+  transition: all 0.3s ease;
+  position: relative;
+  width: 100%;
+  height: clamp(23.75rem, 8.0357rem + 24.5536vw, 37.5rem);
+}
+#ourProducts .content .ourProducts .items > div > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#ourProducts .content .ourProducts .items > div .cta {
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+}
+#ourProducts .content .ourProducts .items > div p {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: var(--font-24);
+  transform: translateY(-50%);
+  opacity: 0;
+}
+#ourProducts .content .ourProducts .items > p {
+  font-size: var(--font-24);
+  color: var(--secondaryBlack);
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+#ourProducts .content .ourProducts .btnss {
+  position: absolute;
+  right: 10%;
+  bottom: 0%;
+  z-index: 9;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 15px;
+}
+#ourProducts .content .ourProducts .btnss .swiper-button-prev img {
+  transform: rotate(180deg);
+}
+#ourProducts .content .ourProducts .btnss .swiper-button-disabled {
+  background-color: #E4E4E4;
+  opacity: 1;
+}
+#ourProducts .content .ourProducts .btnss .swiper-button-disabled img {
+  opacity: 0.4;
+}
+#ourProducts .content .ourProducts .btnss button {
+  padding: 15px;
+  height: var(--navBtn);
+  width: var(--navBtn);
+  border: 0;
+  background-color: var(--green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: unset;
+}
+#ourProducts .content .ourProducts .btnss button:after, #ourProducts .content .ourProducts .btnss button:before {
+  display: none;
+}
+#ourProducts .content .ourProducts .btnss button img {
+  height: 100%;
+  width: 100%;
+}
+
+#sustainabiltyStandard {
+  background-color: #fffff4;
+  display: grid;
+  grid-template-columns: 47% 48%;
+  gap: 5%;
+  padding: 150px var(--padd) 150px;
+  align-items: center;
+  position: relative;
+}
+#sustainabiltyStandard .back_svg {
+  position: absolute;
+  height: 100%;
+}
+#sustainabiltyStandard .leftContent {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  position: relative;
+}
+#sustainabiltyStandard .accordian {
+  position: relative;
+}
+#sustainabiltyStandard .accordian .faq {
+  border-bottom: 1px solid grey;
+  padding: max(20px, 4%) 0;
+}
+#sustainabiltyStandard .accordian .faq .head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+#sustainabiltyStandard .accordian .faq .head .open {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  display: block;
+  transform: translateY(-3px);
+  transition: all 0.3s;
+}
+#sustainabiltyStandard .accordian .faq .head p {
+  font-size: var(--font-24);
+  color: var(--text-color);
+  font-weight: 300;
+}
+#sustainabiltyStandard .accordian .faq .ans {
+  padding-right: 30px;
+  display: none;
+}
+#sustainabiltyStandard .accordian .faq .ans p, #sustainabiltyStandard .accordian .faq .ans li {
+  color: var(--tertiaryBlack);
+  font-size: var(--font-20);
+  padding-top: 3%;
+  font-weight: 300;
+}
+#sustainabiltyStandard .accordian .faq .ans p span, #sustainabiltyStandard .accordian .faq .ans li span {
+  color: var(--secondaryBlack);
+}
+#sustainabiltyStandard .accordian .faq .ans ul, #sustainabiltyStandard .accordian .faq .ans ol {
+  padding-left: 1.2rem;
+}
+#sustainabiltyStandard .accordian .faq.default-open .head .open {
+  transform: rotateX(180deg);
+}/*# sourceMappingURL=style.css.map */

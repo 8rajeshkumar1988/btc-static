@@ -1,41 +1,42 @@
-const lenis = new Lenis();
-
-lenis.on('scroll', ScrollTrigger.update);
+$(document).ready(function () {
 
 
-gsap.ticker.add((time) => {
-    lenis.raf(time * 1000);
-});
 
-gsap.ticker.lagSmoothing(0);
+    var swiper = new Swiper(".ourProducts", {
+        spaceBetween: 30,
+        centeredSlides: false,
+        slidesPerView: 2.2,
+        loop: true,
+        // autoplay: { 
+        //     delay: 2500,
+        //     disableOnInteraction: false,
+        // },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
 
 
-gsap.registerPlugin(ScrollTrigger);
+    $('.faq.default-open .ans').slideDown(500)
+
+    $('.faq').click(function () {
+        const item = $(this)
+        $('.faq.default-open .ans').slideUp(500)
+        const answer = item.find('.ans');
+        if (item.hasClass('default-open')) {
+            item.removeClass('default-open')
+            answer.slideUp(500)
+        } else {
+            $('.faq').removeClass('default-open')
+            item.addClass('default-open')
+            answer.slideDown(500)
+        }
+    })
 
 
- const leftTrack = document.querySelector(".left-slide");
-  const leftContent = leftTrack.querySelector(".marquee-content");
-  const leftContentWidth = leftContent.offsetWidth;
-  const speed = 100;
-  const duration = leftContentWidth / speed;
-
-  gsap.to(leftTrack, {
-    x: -leftContentWidth,
-    ease: "none",
-    duration: duration,
-    repeat: -1,
-  });
-  const rightTrack = document.querySelector(".right-slide");
-  const rightContent = rightTrack.querySelector(".marquee-content");
-  const rightContentWidth = rightContent.offsetWidth;
-  const rightDuration = rightContentWidth / speed;
-  gsap.fromTo(
-    rightTrack,
-    { x: -rightContentWidth },
-    {
-      x: 0,
-      ease: "none",
-      duration: rightDuration,
-      repeat: -1,
-    }
-  );
+})
