@@ -21,7 +21,7 @@
   --blue: #342C7E;
   --padd: 10%;
   --headingTop: 5px;
-  --navBtn: 70px;
+  --navBtn:clamp(2.5rem, 1.0714rem + 2.2321vw, 3.75rem);
 }
 
 .heroBanner {

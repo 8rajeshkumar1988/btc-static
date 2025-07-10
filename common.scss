@@ -8,7 +8,7 @@
 }
 
 :root {
-  --font-46: clamp(2rem, 0.1653rem + 2.2581vw, 2.875rem);
+  --font-46: clamp(2rem, 0.1653rem + 2.2581vw, 2.875rem); // 46 - 32
   --font-20: 20px;
   --font-24: 24px;
   --font-14: 14px;
@@ -21,8 +21,9 @@
   --blue: #342C7E;
   --padd: 10%;
   --headingTop: 5px;
-  --navBtn: 70px;
+  --navBtn:clamp(2.5rem, 1.0714rem + 2.2321vw, 3.75rem); // 60 - 40
 }
+
 
 .heroBanner{
     position: relative;
