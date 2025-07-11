@@ -8,7 +8,7 @@
 }
 
 :root {
-  --font-46: clamp(2rem, 0.1653rem + 2.2581vw, 2.875rem);
+  --font-46: clamp(2rem, 0.1653rem + 2.2581vw, 2.875rem); // 46 - 32
   --font-20: 20px;
   --font-24: 24px;
   --font-14: 14px;
@@ -23,7 +23,9 @@
   --headingTop: 5px;
   --navBtn: 70px;
   --padding150: clamp(5rem, -4.1734rem + 11.2903vw, 9.375rem);  // 1300 - 1920
+  --navBtn:clamp(2.5rem, 1.0714rem + 2.2321vw, 3.75rem); // 60 - 40
 }
+
 
 .heroBanner{
     position: relative;
@@ -97,4 +99,36 @@
       color: var(--secondaryBlack);
       margin-top: var(--headingTop);
     }
+}
+
+
+#our_clients {
+  .heading {
+    padding: var(--padd);
+    padding-bottom:0 ;
+  }
+  .marquee-container {
+    overflow: hidden;
+    width: 100%;
+    // background: #f5f5f5;
+    // padding: 20px 0;
+    position: relative;
+    padding-bottom: var(--padd);
+  }
+
+  .marquee-track {
+    display: flex;
+    width: max-content;
+    margin: clamp(3.125rem, 2.75rem + 1.875vw, 5rem) 0px;
+  }
+
+  .marquee-content {
+    display: flex;
+  }
+
+  .marquee-content img {
+    height: clamp(2.5rem, 2rem + 2.5vw, 5rem);
+    margin-right: clamp(2.5rem, 2rem + 2.5vw, 5rem);
+    object-fit: contain;
+  }
 }
