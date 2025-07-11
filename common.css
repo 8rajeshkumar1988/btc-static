@@ -126,4 +126,65 @@
   margin-right: clamp(2.5rem, 2rem + 2.5vw, 5rem);
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+#our_social {
+  position: relative;
+}
+#our_social > img {
+  width: 80%;
+  position: absolute;
+  transform: rotate(270deg) translate(10%, -10%);
+  inset: 0;
+  z-index: 0;
+}
+#our_social .our_social_head {
+  position: relative;
+  padding: var(--padd);
+  padding-bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#our_social .swiper {
+  width: 100%;
+  height: 100%;
+}
+#our_social .social_media {
+  position: relative;
+  margin-top: 40px;
+}
+#our_social .social_media .social_media_card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-color: aqua;
+  aspect-ratio: 286/358;
+}
+#our_social .social_media .social_media_card > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  inset: 0;
+}
+#our_social .social_media .social_media_card .social_icon {
+  width: clamp(1.5rem, 1.3rem + 1vw, 2.5rem);
+  height: clamp(1.5rem, 1.3rem + 1vw, 2.5rem);
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 1;
+}
+#our_social .social_media .social_media_card .social_icon > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }/*# sourceMappingURL=common.css.map */

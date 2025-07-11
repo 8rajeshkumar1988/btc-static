@@ -412,4 +412,8 @@
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+#our_social {
+  overflow: hidden;
 }/*# sourceMappingURL=style.css.map */
