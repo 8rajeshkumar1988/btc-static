@@ -70,96 +70,87 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script>
-        const images = document.querySelectorAll('.swirl-img');
-        const container = document.querySelector('.container');
-        const containerWidth = container.offsetWidth;
-        const containerHeight = container.offsetHeight;
+       const images = document.querySelectorAll('.swirl-img');
+const container = document.querySelector('.container');
+const containerWidth = container.offsetWidth;
+const containerHeight = container.offsetHeight;
 
-        const centerIndex = Math.floor(images.length / 2);
+const centerIndex = Math.floor(images.length / 2);
+let swirlTimeline;
 
-        let swirlTimeline;
+// Fixed directions for scattered images (for rest)
+const fixedPaths = [
+  { x: -1300, y: -1200 }, { x: -800, y: -1400 },
+  { x: -1400, y: 0 },     { x: -1300, y: 1200 },
+  { x: 1300, y: -1200 },  { x: 800, y: -1400 },
+  { x: 1400, y: 0 },      { x: 1300, y: 1200 },
+  { x: 0, y: -1600 },     { x: 0, y: 1600 },
+  { x: -900, y: 1600 },   { x: 900, y: 1600 }
+];
 
-        // Fixed directions for scattered images (for rest)
-        const fixedPaths = [
-            { x: -1300, y: -1200 }, // top-left
-            { x: -800, y: -1400 },  // top-left shallow
-            { x: -1400, y: 0 },     // direct left
-            { x: -1300, y: 1200 },  // bottom-left
+// Initial stacked setup
+function setInitialLayout() {
+  images.forEach((img, index) => {
+    const offset = index - centerIndex;
+    const scale = 1 - Math.abs(offset) * 0.1;
+    const xOffset = offset * 60;
 
-            { x: 1300, y: -1200 },  // top-right
-            { x: 800, y: -1400 },   // top-right shallow
-            { x: 1400, y: 0 },      // direct right
-            { x: 1300, y: 1200 },   // bottom-right
+    gsap.set(img, {
+      x: xOffset,
+      y: 0,
+      scale: scale,
+      rotation: 0,
+      zIndex: 100 - Math.abs(offset),
+    });
+  });
+}
 
-            { x: 0, y: -1600 },     // straight top
-            { x: 0, y: 1600 },      // straight bottom
-            { x: -900, y: 1600 },   // bottom-left outward
-            { x: 900, y: 1600 }     // bottom-right outward
-        ];
+setInitialLayout();
 
+// ✅ Swirl animation triggered by center image click
+images[centerIndex].addEventListener('click', () => {
+  // Prevent replay if already played
+  if (swirlTimeline && swirlTimeline.progress() === 1) return;
 
-        // Initial stacked setup
-        function setInitialLayout() {
-            images.forEach((img, index) => {
-                const offset = index - centerIndex;
-                const scale = 1 - Math.abs(offset) * 0.1;
-                const xOffset = offset * 60;
+  swirlTimeline = gsap.timeline();
 
-                gsap.set(img, {
-                    x: xOffset,
-                    y: 0,
-                    scale: scale,
-                    rotation: 0,
-                    zIndex: 100 - Math.abs(offset),
-                });
-            });
-        }
+  images.forEach((img, index) => {
+    const isCenter = index === centerIndex;
+    const isRightNext = index === centerIndex + 1;
 
-        setInitialLayout();
+    if (isCenter) {
+      swirlTimeline.to(img, {
+        x: -containerWidth / 2 + img.offsetWidth / 2 + 40,
+        y: 0,
+        scale: 1,
+      }, 0);
+    } else if (isRightNext) {
+      swirlTimeline.to(img, {
+        x: containerWidth / 2 - img.offsetWidth / 2 - 40,
+        y: 0,
+        scale: 1,
+      }, 0);
+    } else {
+      const pathIndex = (index < centerIndex) ? index : index - 2;
+      const path = fixedPaths[pathIndex % fixedPaths.length];
 
-        document.getElementById('swirlButton').addEventListener('click', () => {
-            // Avoid replaying if already played
-            if (swirlTimeline && swirlTimeline.progress() === 1) return;
+      swirlTimeline.to(img, {
+        x: path.x,
+        y: path.y,
+        scale: 0.9,
+        duration: 1,
+      }, 0);
+    }
+  });
+});
 
-            swirlTimeline = gsap.timeline();
+// ✅ Reset button to reverse the animation
+document.getElementById('resetButton').addEventListener('click', () => {
+  if (swirlTimeline) {
+    swirlTimeline.reverse();
+  }
+});
 
-            images.forEach((img, index) => {
-                const isCenter = index === centerIndex;
-                const isRightNext = index === centerIndex + 1;
-
-                if (isCenter) {
-                    swirlTimeline.to(img, {
-                        x: -containerWidth / 2 + img.offsetWidth / 2 + 40,
-                        y: 0,
-                        scale: 1,
-
-                    }, 0); // all animations start together (at time = 0)
-                } else if (isRightNext) {
-                    swirlTimeline.to(img, {
-                        x: containerWidth / 2 - img.offsetWidth / 2 - 40,
-                        y: 0,
-                        scale: 1,
-                    }, 0);
-                } else {
-                    const pathIndex = (index < centerIndex) ? index : index - 2;
-                    const path = fixedPaths[pathIndex % fixedPaths.length];
-
-                    swirlTimeline.to(img, {
-                        x: path.x,
-                        y: path.y,
-                        scale: 0.9,
-                        //   rotation: 30 * (pathIndex + 1),
-                        duration: 1,
-                    }, 0);
-                }
-            });
-        });
-
-        document.getElementById('resetButton').addEventListener('click', () => {
-            if (swirlTimeline) {
-                swirlTimeline.reverse();
-            }
-        });
     </script>
 
 </body>

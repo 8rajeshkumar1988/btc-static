@@ -58,7 +58,7 @@
 #aboutBtc .content .sliderAbout .slides_about .tiles > div:first-child .tag {
   font-size: var(--font-20);
   color: var(--secondaryBlack);
-  background-color: #E4E4E4;
+  background-color: #e4e4e4;
   padding: 10px 20px;
 }
 #aboutBtc .content .sliderAbout .slides_about .tiles > div:last-child p {
@@ -171,7 +171,7 @@
   transform: rotate(180deg);
 }
 #ourProducts .content .ourProducts .btnss .swiper-button-disabled {
-  background-color: #E4E4E4;
+  background-color: #e4e4e4;
   opacity: 1;
 }
 #ourProducts .content .ourProducts .btnss .swiper-button-disabled img {
@@ -245,18 +245,38 @@
   padding-right: 30px;
   display: none;
 }
-#sustainabiltyStandard .accordian .faq .ans p, #sustainabiltyStandard .accordian .faq .ans li {
+#sustainabiltyStandard .accordian .faq .ans p,
+#sustainabiltyStandard .accordian .faq .ans li {
   color: var(--tertiaryBlack);
   font-size: var(--font-20);
   padding-top: 3%;
   font-weight: 300;
 }
-#sustainabiltyStandard .accordian .faq .ans p span, #sustainabiltyStandard .accordian .faq .ans li span {
+#sustainabiltyStandard .accordian .faq .ans p span,
+#sustainabiltyStandard .accordian .faq .ans li span {
   color: var(--secondaryBlack);
 }
-#sustainabiltyStandard .accordian .faq .ans ul, #sustainabiltyStandard .accordian .faq .ans ol {
+#sustainabiltyStandard .accordian .faq .ans ul,
+#sustainabiltyStandard .accordian .faq .ans ol {
   padding-left: 1.2rem;
 }
 #sustainabiltyStandard .accordian .faq.default-open .head .open {
   transform: rotateX(180deg);
+}
+
+#ourCapabilities .cap_container {
+  position: relative;
+  padding: 100px var(--padd) 100px;
+  height: 90vh;
+  overflow: hidden;
+}
+#ourCapabilities .cap_container .swirl-img {
+  position: absolute;
+  width: 400px;
+  aspect-ratio: 3/4;
+  -o-object-fit: cover;
+     object-fit: cover;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }/*# sourceMappingURL=style.css.map */
