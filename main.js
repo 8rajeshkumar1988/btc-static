@@ -13,6 +13,11 @@ gsap.ticker.lagSmoothing(0);
 gsap.registerPlugin(ScrollTrigger);
 
 
+const social_media = new Swiper(".social_media", {
+  slidesPerView: 'auto',
+  spaceBetween: 30,
+});
+
 const leftTrack = document.querySelector(".left-slide");
 const leftContent = leftTrack.querySelector(".marquee-content");
 const leftContentWidth = leftContent.offsetWidth;
@@ -42,8 +47,4 @@ gsap.fromTo(
 
 
 
-const social_media = new Swiper(".social_media", {
-  slidesPerView: 4.2,
-  spaceBetween: 30,
 
-});
