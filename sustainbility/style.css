@@ -1,0 +1,83 @@
+.traceability {
+  height: 400vh; /* enough scroll height */
+  position: relative;
+}
+
+.image-wrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 100vh;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.traceability::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: black;
+  opacity: 0.3;
+}
+
+.image-wrapper img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transform-origin: center center;
+  scale: 0;
+  opacity: 1;
+}
+
+#certificates_compliances {
+  padding: var(--padd);
+  background: linear-gradient(180deg, #2F2874 0%, #201A5B 100%);
+  position: relative;
+  z-index: 1;
+}
+#certificates_compliances .heading p {
+  color: rgba(255, 255, 255, 0.6);
+}
+#certificates_compliances .heading h2 {
+  color: #ffffff;
+}
+#certificates_compliances .cc_container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(1.25rem, 0.75rem + 2.5vw, 3.75rem);
+  margin-top: 40px;
+}
+#certificates_compliances .cc_container .certificate_card {
+  display: grid;
+  grid-template-columns: 160px auto;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 0px;
+  padding-right: clamp(0rem, -1rem + 5vw, 5rem);
+}
+#certificates_compliances .cc_container .certificate_card .certificate_logo img {
+  width: 100%;
+  height: auto;
+  max-width: 140px;
+}
+#certificates_compliances .cc_container .certificate_card .certificate_description {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+#certificates_compliances .cc_container .certificate_card .certificate_description .certificate_title {
+  font-size: var(--font-20);
+  font-weight: 400;
+  margin: 0;
+  color: var(--green);
+}
+#certificates_compliances .cc_container .certificate_card .certificate_description p {
+  margin: 0;
+  font-size: var(--font-18);
+  line-height: 1.5;
+  color: #fff;
+}/*# sourceMappingURL=style.css.map */

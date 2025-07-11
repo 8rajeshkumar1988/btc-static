@@ -99,6 +99,9 @@
   margin-top: var(--headingTop);
 }
 
+#our_clients {
+  position: relative;
+}
 #our_clients .heading {
   padding: var(--padding150) var(--padd);
   padding-bottom: 0;

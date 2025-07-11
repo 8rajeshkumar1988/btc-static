@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Smooth Scroll with Overlapping Images</title>
+  <style>
+    body, html {
+      margin: 0; padding: 0; box-sizing: border-box;
+      background: #111; color: #fff; overflow-x: hidden;
+    }
+
+    .hero, .footer {
+      height: 100vh;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 3rem;
+      background: #222;
+      position: relative;
+      z-index: 10;
+    }
+
+    .traceability {
+      height: 500vh;
+      position: relative;
+      z-index: 1;
+    }
+
+    .image-wrapper {
+      position: fixed;
+      top: 50%; left: 50%;
+      width: 100vw; height: 100vh;
+      transform: translate(-50%, -50%);
+      overflow: hidden;
+      pointer-events: none;
+      visibility: hidden; /* Hide all images initially */
+    }
+
+    .image-wrapper::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: black;
+      opacity: 0.3;
+    }
+
+    .image-wrapper img {
+      position: absolute;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transform-origin: center center;
+      scale: 1; /* first image scale 1 */
+      opacity: 1; /* first image visible */
+    }
+
+    /* Only first image visible initially, rest scale 0 opacity 0 */
+    .image-wrapper:nth-child(1) {
+      visibility: visible;
+    }
+    .image-wrapper:nth-child(n+2) img {
+      scale: 0;
+      opacity: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hero">Hero Section</div>
+
+  <section class="traceability">
+    <div class="image-wrapper">
+      <img src="https://picsum.photos/id/1015/1920/1080" alt="Image 1" />
+    </div>
+    <div class="image-wrapper">
+      <img src="https://picsum.photos/id/1016/1920/1080" alt="Image 2" />
+    </div>
+    <div class="image-wrapper">
+      <img src="https://picsum.photos/id/1018/1920/1080" alt="Image 3" />
+    </div>
+    <div class="image-wrapper">
+      <img src="https://picsum.photos/id/1021/1920/1080" alt="Image 4" />
+    </div>
+  </section>
+
+  <div class="footer">Footer Section</div>
+
+  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+
+  <script>
+    const images = document.querySelectorAll(".image-wrapper");
+    const vh = window.innerHeight;
+
+    // Show first image by default with no animation (already visible by CSS)
+
+    // Now handle scroll animations for images 2 onward
+    images.forEach((wrapper, i) => {
+      if(i === 0) return; // skip first image, already visible
+
+      const img = wrapper.querySelector("img");
+      gsap.set(wrapper, {visibility: 'visible'}); // show wrapper on scroll
+
+      gsap.timeline({
+        scrollTrigger: {
+          trigger: ".traceability",
+          start: () => `top -${vh * i}`,
+          end: () => `top -${vh * (i + 1)}`,
+          scrub: true,
+          onEnter: () => gsap.set(wrapper, {visibility: 'visible'}),
+          onLeaveBack: () => gsap.set(wrapper, {visibility: 'hidden'}),
+        }
+      }).fromTo(img, { scale: 0, opacity: 0 }, { scale: 1, opacity: 1 });
+    });
+  </script>
+
+</body>
+</html>
