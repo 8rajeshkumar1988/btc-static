@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../common.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <section class="heroBanner">
+      <video
+        playsinline
+        autoplay
+        muted
+        loop
+        src="../assets/about-us.mp4"></video>
+      <!-- <img src="../assets/product-detail.png" alt="" /> -->
+      <div class="content">
+        <p class="breadcrub">Home / Sustainability</p>
+        <div class="heading">
+          <p style="color: #00000099">SUSTAINABILITY</p>
+          <h1 style="color: #000000">
+            Eco-Innovation at <br />
+            Every Stage
+          </h1>
+        </div>
+      </div>
+    </section>
+    <section id="faqs">
+      <img src="../assets/BTC_pattern.png" alt="" />
+      <div class="heading">
+        <p>Your Questions, Answered</p>
+        <h2>Frequently Asked Questions</h2>
+      </div>
+      <div class="accordian">
+        <div
+          class="faq default-open"
+          style="
+            translate: none;
+            rotate: none;
+            scale: none;
+            transform: translate(0px, 0px);
+            opacity: 1;
+          ">
+          <div class="head">
+            <p>Do you offer private label manufacturing for fashion brands?</p>
+            <img
+              class="menu open"
+              src="../assets/arow_donw.svg"
+              alt="clase icon" />
+          </div>
+          <div class="ans" style="display: none">
+            <p>
+              Our MOQ typically starts from 500 to 1,000 pieces per style,
+              depending on the fabric, design complexity, and print or
+              embellishment requirements.
+            </p>
+          </div>
+        </div>
+        <div
+          class="faq"
+          style="
+            translate: none;
+            rotate: none;
+            scale: none;
+            transform: translate(0px, 0px);
+            opacity: 1;
+          ">
+          <div class="head">
+            <p>What is your minimum order quantity (MOQ)?</p>
+            <img
+              class="menu open"
+              src="../assets/arow_donw.svg"
+              alt="clase icon" />
+          </div>
+          <div class="ans" style="display: none">
+            <p>
+              Our MOQ typically starts from 500 to 1,000 pieces per style,
+              depending on the fabric, design complexity, and print or
+              embellishment requirements.
+            </p>
+          </div>
+        </div>
+        <div
+          class="faq"
+          style="
+            translate: none;
+            rotate: none;
+            scale: none;
+            transform: translate(0px, 0px);
+            opacity: 1;
+          ">
+          <div class="head">
+            <p>
+              Can you support startups or small brands with lower quantities?
+            </p>
+            <img
+              class="menu open"
+              src="../assets/arow_donw.svg"
+              alt="clase icon" />
+          </div>
+          <div class="ans" style="display: none">
+            <p>
+              Our MOQ typically starts from 500 to 1,000 pieces per style,
+              depending on the fabric, design complexity, and print or
+              embellishment requirements.
+            </p>
+          </div>
+        </div>
+        <div
+          class="faq"
+          style="
+            translate: none;
+            rotate: none;
+            scale: none;
+            transform: translate(0px, 0px);
+            opacity: 1;
+          ">
+          <div class="head">
+            <p>Do you provide design or product development services?</p>
+            <img
+              class="menu open"
+              src="../assets/arow_donw.svg"
+              alt="clase icon" />
+          </div>
+          <div class="ans" style="display: none">
+            <p>
+              Our MOQ typically starts from 500 to 1,000 pieces per style,
+              depending on the fabric, design complexity, and print or
+              embellishment requirements.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="virtual_factory_experience">
+      <div class="heading">
+        <p>Inside BTC</p>
+        <h2>Virtual Factory Experience</h2>
+      </div>
+      <!-- <div class="virtual_container">
+        <iframe src="https://www.google.com/maps/embed?pb=!4v1752237216067!6m8!1m7!1sCAoSHENJQUJJaEFuNjhNcjFncDBiSHN0enBrb29uUlc.!2m2!1d-4.683459!2d11.8169195!3f224.67!4f5.239999999999995!5f0.7820865974627469" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div> -->
+       <div class="virtual_container" id="virtualContainer">
+    <button class="close_btn" id="closeBtn">Close</button>
+    <div class="map_overlay" id="mapOverlay">Double-click to enter view</div>
+    <iframe id="mapIframe" src="https://www.google.com/maps/embed?pb=!4v1752237216067!6m8!1m7!1sCAoSHENJQUJJaEFuNjhNcjFncDBiSHN0enBrb29uUlc.!2m2!1d-4.683459!2d11.8169195!3f224.67!4f5.239999999999995!5f0.7820865974627469" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+    </section>
+    <section id="newsletter">
+      <div class="heading">
+        <p>Never Miss an Update</p>
+        <h2>Sign Up for Our Newsletter</h2>
+      </div>
+      <form class="newsletter_form" action="/">
+        <div class="f_name">
+          <label for="first_name">First Name</label>
+          <br />
+          <input
+            id="first_name"
+            type="text"
+            placeholder="Enter your first name" />
+        </div>
+        <div class="l_name">
+          <label for="last_name">Last Name</label>
+          <br />
+          <input
+            id="last_name"
+            type="text"
+            placeholder="Enter your last name" />
+        </div>
+        <div class="email_g">
+          <label for="email">Email</label>
+          <br />
+          <input id="email" type="email" placeholder="Enter your email" />
+        </div>
+        <button class="cta">
+          Subscribe
+          <img src="../assets/right_arrow.svg" alt="right arrow" />
+        </button>
+      </form>
+    </section>
+  </body>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+  <script src="https://unpkg.com/lenis@1.0.45/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+  <script src="https://unpkg.com/split-type"></script>
+  <script src="../main.js"></script>
+  <script>
+     const overlay = document.getElementById('mapOverlay');
+    const closeBtn = document.getElementById('closeBtn');
+    const iframe = document.getElementById('mapIframe');
+
+    overlay.addEventListener('dblclick', () => {
+      iframe.style.pointerEvents = 'auto';
+      overlay.style.display = 'none';
+      closeBtn.style.display = 'block';
+    });
+
+    closeBtn.addEventListener('click', () => {
+      iframe.style.pointerEvents = 'none';
+      overlay.style.display = 'flex';
+      closeBtn.style.display = 'none';
+    });
+  </script>
+  <!-- <script src="./script.js"></script> -->
+</html>
