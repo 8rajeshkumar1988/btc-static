@@ -2,7 +2,7 @@
   background-color: #fffff4;
   width: 100%;
   position: relative;
-  padding: 150px var(--padd) 150px;
+  padding: 150px var(--paddingX) 150px;
 }
 #aboutBtc .worldMap {
   position: absolute;
@@ -101,7 +101,7 @@
   padding-bottom: 50px;
 }
 #ourProducts .heading {
-  padding: 150px var(--padd) 50px;
+  padding: 150px var(--paddingX) 50px;
 }
 #ourProducts .content {
   overflow: hidden;
@@ -201,7 +201,7 @@
   display: grid;
   grid-template-columns: 47% 48%;
   gap: 5%;
-  padding: 150px var(--padd) 150px;
+  padding: 150px var(--paddingX) 150px;
   align-items: center;
   position: relative;
 }
@@ -282,7 +282,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  left: var(--padd);
+  left: var(--paddingX);
   z-index: 2;
 }
 #ourCapabilities .leftContent p {
@@ -298,7 +298,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  right: var(--padd);
+  right: var(--paddingX);
   z-index: 2;
   width: 350px;
 }
@@ -315,7 +315,7 @@
 }
 #ourCapabilities .swiper-slide {
   position: initial;
-  height: calc(100vh - (var(--padding150) + var(--padding150)));
+  height: calc(100vh - (var(--paddingY) + var(--paddingY)));
   width: 80vw;
   display: grid;
   grid-template-columns: auto auto;
@@ -353,8 +353,8 @@
 }
 #ourCapabilities .btnssNew {
   position: absolute;
-  right: var(--padd);
-  bottom: var(--padding150);
+  right: var(--paddingX);
+  bottom: var(--paddingY);
   z-index: 9;
   display: flex;
   flex-direction: row-reverse;
@@ -392,13 +392,13 @@
 }
 #ourCapabilities .cap_container {
   position: relative;
-  padding: var(--padding150) var(--padd) var(--padding150);
+  padding: var(--paddingY) var(--paddingX) var(--paddingY);
   height: 100vh;
   display: block;
 }
 #ourCapabilities .cap_container .spiralImage {
   position: absolute;
-  height: calc(100vh - (var(--padding150) + var(--padding150)));
+  height: calc(100vh - (var(--paddingY) + var(--paddingY)));
   width: auto;
   aspect-ratio: 3/4;
   left: 50%;

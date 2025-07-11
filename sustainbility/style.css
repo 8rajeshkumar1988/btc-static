@@ -37,7 +37,7 @@
   position: relative;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  padding: var(--padd);
+  padding: var(--paddingX);
   gap: 40px;
   overflow: hidden;
   align-items: center;
@@ -71,7 +71,7 @@
 }
 
 #certificates_compliances {
-  padding: var(--padd);
+  padding: var(--paddingX);
   background: linear-gradient(180deg, #2f2874 0%, #201a5b 100%);
   position: relative;
   z-index: 1;

@@ -5,7 +5,7 @@ body {
   --heading: clamp(2.25rem, 1.875rem + 1.875vw, 4.125rem);
 }
 #event {
-  padding: var(--padd);
+  padding: var(--paddingX);
   .heading {
     h2 {
       font-size: var(--heading);
@@ -19,7 +19,7 @@ body {
 
 
 #newsletter {
-  padding: var(--padd);
+  padding: var(--paddingX);
   position: relative;
   .newsletter_form {
     display: grid;

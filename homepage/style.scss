@@ -2,7 +2,7 @@
     background-color: #fffff4;
     width: 100%;
     position: relative;
-    padding: 150px var(--padd) 150px;
+    padding: 150px var(--paddingX) 150px;
     .worldMap {
         position: absolute;
         top: 150px;
@@ -106,7 +106,7 @@
     background-color: #fff;
     padding-bottom: 50px;
     .heading {
-        padding: 150px var(--padd) 50px;
+        padding: 150px var(--paddingX) 50px;
     }
     .content {
         overflow: hidden;
@@ -214,7 +214,7 @@
     display: grid;
     grid-template-columns: 47% 48%;
     gap: 5%;
-    padding: 150px var(--padd) 150px;
+    padding: 150px var(--paddingX) 150px;
     align-items: center;
     position: relative;
     .back_svg {
@@ -298,7 +298,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        left: var(--padd);
+        left: var(--paddingX);
         z-index: 2;
         p {
             color: var(--green);
@@ -314,7 +314,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        right: var(--padd);
+        right: var(--paddingX);
         z-index: 2;
         width: 350px;
         p {
@@ -331,7 +331,7 @@
     }
     .swiper-slide {
         position: initial;
-        height: calc(100vh - (var(--padding150) + var(--padding150)));
+        height: calc(100vh - (var(--paddingY) + var(--paddingY)));
         width: 80vw;
         // border: 1px solid #d9d9d9;
         display: grid;
@@ -372,8 +372,8 @@
     }
     .btnssNew {
         position: absolute;
-        right: var(--padd);
-        bottom: var(--padding150);
+        right: var(--paddingX);
+        bottom: var(--paddingY);
         z-index: 9;
         display: flex;
         flex-direction: row-reverse;
@@ -415,12 +415,12 @@
     }
     .cap_container {
         position: relative;
-        padding: var(--padding150) var(--padd) var(--padding150);
+        padding: var(--paddingY) var(--paddingX) var(--paddingY);
         height: 100vh;
         display: block;
         .spiralImage {
             position: absolute;
-            height: calc(100vh - (var(--padding150) + var(--padding150)));
+            height: calc(100vh - (var(--paddingY) + var(--paddingY)));
             width: auto;
             aspect-ratio: 3/4;
             left: 50%;

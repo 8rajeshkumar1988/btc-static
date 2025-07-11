@@ -19,9 +19,9 @@
   --tertiaryBlack: #3b3b3b99;
   --green: #d4ff32;
   --blue: #342c7e;
-  --padd: 10%;
+  --paddingX: 10%;
   --headingTop: 5px;
-  --padding150: clamp(5rem, -4.1734rem + 11.2903vw, 9.375rem);
+  --paddingY: clamp(5rem, -4.1734rem + 11.2903vw, 9.375rem);
   --navBtn: clamp(2.5rem, 1.0714rem + 2.2321vw, 3.75rem);
 }
 
@@ -39,7 +39,7 @@
      object-fit: cover;
 }
 .heroBanner .content {
-  padding: 150px var(--padd) 50px;
+  padding: 150px var(--paddingX) 50px;
   position: relative;
   height: 100%;
   display: flex;
@@ -103,14 +103,14 @@
   position: relative;
 }
 #our_clients .heading {
-  padding: var(--padding150) var(--padd);
+  padding: var(--paddingY) var(--paddingX);
   padding-bottom: 0;
 }
 #our_clients .marquee-container {
   overflow: hidden;
   width: 100%;
   position: relative;
-  padding-bottom: var(--padding150);
+  padding-bottom: var(--paddingY);
 }
 #our_clients .marquee-track {
   display: flex;
@@ -140,7 +140,7 @@
 }
 #our_social .our_social_head {
   position: relative;
-  padding: var(--padd);
+  padding: var(--paddingX);
   padding-bottom: 0;
   display: flex;
   justify-content: space-between;

@@ -8,7 +8,7 @@ body {
   position: relative;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  padding: var(--padd);
+  padding: var(--paddingX);
   gap: clamp(3.25rem, -55.4597rem + 72.2581vw, 31.25rem);
   & > img {
     position: absolute;
@@ -40,7 +40,7 @@ body {
 }
 #product_category {
   .heading {
-    padding: 0 var(--padd);
+    padding: 0 var(--paddingX);
   }
   .category_container {
     display: grid;
@@ -70,7 +70,7 @@ body {
   }
 }
 #category_listing {
-  padding: var(--padd);
+  padding: var(--paddingX);
   background-color: #fff;
   .category_list {
     display: grid;
@@ -176,7 +176,7 @@ body {
   }
 }
 #custom_product {
-  padding: 8% var(--padd);
+  padding: 8% var(--paddingX);
   position: relative;
   height: 100vh;
   max-height: 1080px;
@@ -246,7 +246,7 @@ body {
 }
 #customization {
   position: relative;
-  padding: var(--padd);
+  padding: var(--paddingX);
   background-color: #fff;
   overflow: hidden;
   & > img {

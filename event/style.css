@@ -7,7 +7,7 @@ body {
 }
 
 #event {
-  padding: var(--padd);
+  padding: var(--paddingX);
 }
 #event .heading h2 {
   font-size: var(--heading);
@@ -17,7 +17,7 @@ body {
 }
 
 #newsletter {
-  padding: var(--padd);
+  padding: var(--paddingX);
   position: relative;
 }
 #newsletter .newsletter_form {
