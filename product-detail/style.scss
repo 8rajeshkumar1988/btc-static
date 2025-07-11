@@ -272,69 +272,7 @@ body {
 //   object-fit: cover;
 // }
 
-#faqs {
-  padding: var(--paddingX);
-  position: relative;
-  & > img {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    z-index: -1;
-    transform: translate(0%, -25%);
-  }
-  .accordian {
-    position: relative;
-    .faq {
-      border-bottom: 1px solid grey;
-      padding: 40px 0px;
-      .head {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 30px;
 
-        .open {
-          width: 20px;
-          height: 20px;
-          cursor: pointer;
-          display: block;
-          transform: translateY(-3px);
-          transition: all 0.3s;
-        }
-        p {
-          font-size: var(--font-24);
-          color: var(--text-color);
-          font-weight: 500;
-        }
-      }
-      .ans {
-        padding-right: 30px;
-        display: none;
-        p,
-        li {
-          color: var(--tertiaryBlack);
-          font-size: var(--font-20);
-          padding-top: 40px;
-          font-weight: 300;
-          span {
-            color: var(--secondaryBlack);
-          }
-        }
-        ul,
-        ol {
-          padding-left: 1.2rem;
-        }
-      }
-    }
-    .faq.default-open {
-      .head {
-        .open {
-          transform: rotateX(180deg);
-        }
-      }
-    }
-  }
-}
 
 #our_clients {
   .heading {

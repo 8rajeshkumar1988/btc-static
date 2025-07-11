@@ -245,66 +245,6 @@ body {
   height: 100%;
 }
 
-#faqs {
-  padding: var(--paddingX);
-  position: relative;
-}
-#faqs > img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  z-index: -1;
-  transform: translate(0%, -25%);
-}
-#faqs .accordian {
-  position: relative;
-}
-#faqs .accordian .faq {
-  border-bottom: 1px solid grey;
-  padding: 40px 0px;
-}
-#faqs .accordian .faq .head {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 30px;
-}
-#faqs .accordian .faq .head .open {
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
-  display: block;
-  transform: translateY(-3px);
-  transition: all 0.3s;
-}
-#faqs .accordian .faq .head p {
-  font-size: var(--font-24);
-  color: var(--text-color);
-  font-weight: 500;
-}
-#faqs .accordian .faq .ans {
-  padding-right: 30px;
-  display: none;
-}
-#faqs .accordian .faq .ans p,
-#faqs .accordian .faq .ans li {
-  color: var(--tertiaryBlack);
-  font-size: var(--font-20);
-  padding-top: 40px;
-  font-weight: 300;
-}
-#faqs .accordian .faq .ans p span,
-#faqs .accordian .faq .ans li span {
-  color: var(--secondaryBlack);
-}
-#faqs .accordian .faq .ans ul,
-#faqs .accordian .faq .ans ol {
-  padding-left: 1.2rem;
-}
-#faqs .accordian .faq.default-open .head .open {
-  transform: rotateX(180deg);
-}
-
 #our_clients .heading {
   padding: 0 var(--paddingX);
 }

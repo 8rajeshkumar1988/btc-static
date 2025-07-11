@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Interactive Iframe with Double Click and Close</title>
+  <style>
+    .virtual_container {
+      position: relative;
+      margin-top: 40px;
+      max-width: 100%;
+    }
+
+    .virtual_container iframe {
+      width: 100%;
+      aspect-ratio: 16/9;
+      border: 0;
+      pointer-events: none; /* Only iframe is non-clickable initially */
+    }
+
+    .map_overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.4);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      cursor: pointer;
+      user-select: none;
+      z-index: 2;
+    }
+
+    .close_btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: #fff;
+      border: none;
+      padding: 6px 12px;
+      font-size: 14px;
+      border-radius: 4px;
+      cursor: pointer;
+      display: none;
+      z-index: 3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="virtual_container" id="virtualContainer">
+    <button class="close_btn" id="closeBtn">Close</button>
+    <div class="map_overlay" id="mapOverlay">Double-click to enter view</div>
+    <iframe id="mapIframe" src="https://www.google.com/maps/embed?pb=!4v1752237216067!6m8!1m7!1sCAoSHENJQUJJaEFuNjhNcjFncDBiSHN0enBrb29uUlc.!2m2!1d-4.683459!2d11.8169195!3f224.67!4f5.239999999999995!5f0.7820865974627469" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+
+  <script>
+    const overlay = document.getElementById('mapOverlay');
+    const closeBtn = document.getElementById('closeBtn');
+    const iframe = document.getElementById('mapIframe');
+
+    overlay.addEventListener('dblclick', () => {
+      iframe.style.pointerEvents = 'auto';
+      overlay.style.display = 'none';
+      closeBtn.style.display = 'block';
+    });
+
+    closeBtn.addEventListener('click', () => {
+      iframe.style.pointerEvents = 'none';
+      overlay.style.display = 'flex';
+      closeBtn.style.display = 'none';
+    });
+  </script>
+
+</body>
+</html>
