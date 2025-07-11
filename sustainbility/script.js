@@ -1,4 +1,4 @@
-const images = document.querySelectorAll(".image-wrapper img");
+const images = document.querySelectorAll(".animate-scale img");
 const vh = window.innerHeight;
 const heroHeight = document.querySelector(".heroBanner").offsetHeight;
 
