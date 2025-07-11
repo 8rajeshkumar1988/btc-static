@@ -264,19 +264,152 @@
   transform: rotateX(180deg);
 }
 
+#ourCapabilities {
+  overflow: hidden;
+  background: linear-gradient(180deg, #2f2874 0%, #201a5b 100%);
+  position: relative;
+}
+#ourCapabilities .back {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+#ourCapabilities .leftContent {
+  position: absolute;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  left: var(--padd);
+  z-index: 2;
+}
+#ourCapabilities .leftContent p {
+  color: var(--green);
+  opacity: 0.6;
+}
+#ourCapabilities .leftContent h3 {
+  color: #fff;
+}
+#ourCapabilities .rightContent {
+  position: absolute;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  right: var(--padd);
+  z-index: 2;
+  width: 350px;
+}
+#ourCapabilities .rightContent p {
+  font-size: var(--font-20);
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.6);
+}
+#ourCapabilities .rightContent p span {
+  color: #fff;
+}
+#ourCapabilities .rightContent button {
+  margin-top: var(--font-24);
+}
+#ourCapabilities .swiper-slide {
+  position: initial;
+  height: calc(100vh - (var(--padding150) + var(--padding150)));
+  width: 80vw;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 80px;
+  align-items: center;
+}
+#ourCapabilities .swiper-slide .empty {
+  height: 100%;
+  aspect-ratio: 3/4;
+}
+#ourCapabilities .swiper-slide .text {
+  opacity: 0;
+  transform: translateX(150px);
+}
+#ourCapabilities .swiper-slide .text h3 {
+  font-size: var(--font-46);
+  font-weight: 400;
+  color: #fff;
+}
+#ourCapabilities .swiper-slide .text h3 span {
+  color: var(--green);
+}
+#ourCapabilities .swiper-slide .text img {
+  width: 100%;
+  margin: 2% 0 5%;
+}
+#ourCapabilities .swiper-slide .text p {
+  padding-right: 10vw;
+  font-size: var(--font-20);
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.6);
+}
+#ourCapabilities .swiper-slide .text p span {
+  color: #fff;
+}
+#ourCapabilities .btnssNew {
+  position: absolute;
+  right: var(--padd);
+  bottom: var(--padding150);
+  z-index: 9;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 15px;
+  opacity: 0;
+  transform: translate(150px, 0);
+}
+#ourCapabilities .btnssNew .swiper-button-prev img {
+  transform: rotate(180deg);
+}
+#ourCapabilities .btnssNew .swiper-button-disabled {
+  background-color: #e4e4e4;
+  opacity: 1;
+}
+#ourCapabilities .btnssNew .swiper-button-disabled img {
+  opacity: 0.4;
+}
+#ourCapabilities .btnssNew button {
+  padding: 15px;
+  height: var(--navBtn);
+  width: var(--navBtn);
+  border: 0;
+  background-color: var(--green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: unset;
+}
+#ourCapabilities .btnssNew button:after, #ourCapabilities .btnssNew button:before {
+  display: none;
+}
+#ourCapabilities .btnssNew button img {
+  height: 100%;
+  width: 100%;
+}
 #ourCapabilities .cap_container {
   position: relative;
-  padding: 100px var(--padd) 100px;
-  height: 90vh;
-  overflow: hidden;
+  padding: var(--padding150) var(--padd) var(--padding150);
+  height: 100vh;
+  display: block;
 }
-#ourCapabilities .cap_container .swirl-img {
+#ourCapabilities .cap_container .spiralImage {
   position: absolute;
-  width: 400px;
+  height: calc(100vh - (var(--padding150) + var(--padding150)));
+  width: auto;
   aspect-ratio: 3/4;
-  -o-object-fit: cover;
-     object-fit: cover;
   left: 50%;
   top: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
   transform: translate(-50%, -50%);
+}
+#ourCapabilities .cap_container .spiralImage img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=style.css.map */

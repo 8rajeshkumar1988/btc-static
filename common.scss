@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;    
-    font-family: "Inter", sans-serif;
-    line-height: 1.5;
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  line-height: 1.5;
 }
 
 :root {
@@ -18,51 +18,50 @@
   --secondaryBlack: #3b3b3b;
   --tertiaryBlack: #3b3b3b99;
   --green: #d4ff32;
-  --blue: #342C7E;
+  --blue: #342c7e;
   --padd: 10%;
-  --headingTop: 5px;
-  --navBtn: 70px;
-  --padding150: clamp(5rem, -4.1734rem + 11.2903vw, 9.375rem);  // 1300 - 1920
-  --navBtn:clamp(2.5rem, 1.0714rem + 2.2321vw, 3.75rem); // 60 - 40
+  --headingTop: 5px;  
+  --padding150: clamp(5rem, -4.1734rem + 11.2903vw, 9.375rem); // 1300 - 1920
+  --navBtn: clamp(2.5rem, 1.0714rem + 2.2321vw, 3.75rem); // 60 - 40
 }
 
-
-.heroBanner{
-    position: relative;
-    height: 95vh;
+.heroBanner {
+  position: relative;
+  height: 95vh;
+  width: 100%;
+  & > video,
+  img {
+    position: absolute;
     width: 100%;
-    & > video, img{
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+    height: 100%;
+    object-fit: cover;
+  }
+  .content {
+    padding: 150px var(--padd) 50px;
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    & > div {
+      h1 {
+        font-size: var(--font-46);
+        font-weight: 400;
+        color: #fff;
+        margin-top: var(--headingTop);
+        // line-height: 100%;
+      }
+      p {
+        font-size: 20px;
+        font-weight: 700;
+        color: #ffffff99;
+      }
     }
-    .content{
-        padding: 150px var(--padd) 50px;
-        position: relative;
-        height: 100%;    
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
-        & > div{
-            h1{
-                font-size: var(--font-46);
-                font-weight: 400;
-                color: #fff;
-                margin-top: var(--headingTop);
-                // line-height: 100%;
-            }
-            p{
-                font-size: 20px;
-                font-weight: 700;
-                color: #FFFFFF99;
-            }
-        }
-        .breadcrub{
-            font-size: var(--font-20);
-            color: #FFFFFF99;
-        }
+    .breadcrub {
+      font-size: var(--font-20);
+      color: #ffffff99;
     }
+  }
 }
 
 .cta {
@@ -78,34 +77,35 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  img{
+  img {
     width: 20px;
     height: 20px;
   }
 }
 
-.heading{
-    p{
-      font-size: var(--font-20);
-      line-height: 1.5;
-      color: var(--tertiaryBlack);
-      font-weight: 700;
-      text-transform: uppercase;
-    }
-    h2, h3, h4{
-      font-size: var(--font-46);
-      line-height: 1.5;
-      font-weight: 400;
-      color: var(--secondaryBlack);
-      margin-top: var(--headingTop);
-    }
+.heading {
+  p {
+    font-size: var(--font-20);
+    line-height: 1.5;
+    color: var(--tertiaryBlack);
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  h2,
+  h3,
+  h4 {
+    font-size: var(--font-46);
+    line-height: 1.5;
+    font-weight: 400;
+    color: var(--secondaryBlack);
+    margin-top: var(--headingTop);
+  }
 }
-
 
 #our_clients {
   .heading {
-    padding: var(--padd);
-    padding-bottom:0 ;
+    padding: var(--padding150) var(--padd);  
+    padding-bottom: 0;  
   }
   .marquee-container {
     overflow: hidden;
@@ -113,7 +113,7 @@
     // background: #f5f5f5;
     // padding: 20px 0;
     position: relative;
-    padding-bottom: var(--padd);
+    padding-bottom: var(--padding150);
   }
 
   .marquee-track {
