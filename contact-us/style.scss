@@ -1,64 +1,178 @@
-body{
+body {
   background-color: #fffff4;
 }
-#virtual_factory_experience{
-  padding: calc(var(--paddingY) / 2)  var(--paddingX) ;
+#lead_form {
+  padding: var(--paddingY) var(--paddingX);
+  background-color: #fff;
+  .heading {
+    h2 {
+      color: var(--blue);
+      font-weight: 600;
+    }
+  }
+  form {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+    row-gap: 30px;
+    margin-top: 40px;
+  }
+  label {
+    font-size: var(--font-16);
+  }
+  input,
+  select,
+  textarea {
+    width: 100%;
+    border: none;
+    border: 1px solid #d9d9d9;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 15px;
+    font-size: var(--font-16);
+  }
+  .whatsapp_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .checkbox_container {
+      display: flex;
+      align-items: center;
+      margin-left: 10px;
+      gap: 5px;
+      label {
+        font-size: 12px;
+      }
+      #whatsapp_checkbox {
+        width: auto;
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+  .policy_container,
+  .e_com_btc {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-top: 40px;
+    input {
+      width: auto;
+      margin: 0;
+    }
+  }
+  .textareaDiv {
+    grid-area: 2 / 3 / 4 / 4;
+  }
+  .btn_container {
+    display: flex;
+    justify-content: flex-end;
+  }
+  // select {
+  //   appearance: none;
+  //   background-image: url('/assets/arow_donw.svg');
+  //   background-repeat: no-repeat;
+  //   background-position: right 10px center;
+  //   background-size: 20px;
+  // }
+}
+#virtual_factory_experience {
+  padding: calc(var(--paddingY) / 2) var(--paddingX);
   background-color: white;
-  .heading{
+  .heading {
     text-align: center;
   }
   .virtual_container {
-      position: relative;
-      margin-top: 40px;
-      max-width: 100%;
-    }
+    position: relative;
+    margin-top: 40px;
+    max-width: 100%;
+  }
 
-    .virtual_container iframe {
+  .virtual_container iframe {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border: 0;
+    pointer-events: none; /* Only iframe is non-clickable initially */
+  }
+
+  .map_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    cursor: pointer;
+    user-select: none;
+    z-index: 2;
+  }
+
+  .close_btn {
+    background: none rgb(68, 68, 68);
+    border: 0px;
+    margin: 10px;
+    padding: 0px;
+    text-transform: none;
+    appearance: none;
+    position: absolute;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 2px;
+    height: 40px;
+    width: 40px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px;
+    overflow: hidden;
+    top: 0px;
+    right: 45px;
+    display: none;
+    img {
       width: 100%;
-      aspect-ratio: 16/9;
-      border: 0;
-      pointer-events: none; /* Only iframe is non-clickable initially */
+      height: 100%;
+      padding: 8px;
+      opacity: 0.8;
+      filter: invert(1);
     }
-
-    .map_overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(0,0,0,0.4);
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 18px;
-      cursor: pointer;
-      user-select: none;
-      z-index: 2;
-    }
-
-    .close_btn {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      background: #fff;
-      border: none;
-      padding: 6px 12px;
-      font-size: 14px;
-      border-radius: 4px;
-      cursor: pointer;
-      display: none;
-      z-index: 3;
-    }
+  }
 }
 
+@media screen and (max-width: 1024px) {
+  #lead_form {
+    form {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .textareaDiv {
+      grid-area: auto;
+    }
+    .whatsapp_input {
+      grid-area: 3 / 1 / 4 / 2;
+    }
+    .policy_container,
+    .e_com_btc {
+      margin: 0;
+    }
+  }
+}
 @media screen and (max-width: 768px) {
-  #virtual_factory_experience{
-    .virtual_container{
-      iframe{
+  #virtual_factory_experience {
+    .virtual_container {
+      iframe {
         aspect-ratio: 9/16;
       }
     }
   }
-  
+  #lead_form {
+    form {
+      grid-template-columns: 1fr;
+    }
+
+    .whatsapp_input {
+      grid-area: 5 / 1 / 6 / 2;
+    }
+    
+  }
 }

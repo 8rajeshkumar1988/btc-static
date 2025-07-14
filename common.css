@@ -193,7 +193,7 @@
 }
 
 #faqs {
-  padding: var(--paddingX);
+  padding: var(--paddingY) var(--paddingX);
   position: relative;
 }
 #faqs > img {
@@ -252,8 +252,12 @@
   transform: rotateX(180deg);
 }
 
+textarea {
+  resize: none;
+}
+
 #newsletter {
-  padding: var(--paddingX);
+  padding: var(--paddingY) var(--paddingX);
   position: relative;
 }
 #newsletter .newsletter_form {

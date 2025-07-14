@@ -2,6 +2,75 @@ body {
   background-color: #fffff4;
 }
 
+#lead_form {
+  padding: var(--paddingY) var(--paddingX);
+  background-color: #fff;
+}
+#lead_form .heading h2 {
+  color: var(--blue);
+  font-weight: 600;
+}
+#lead_form form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  row-gap: 30px;
+  margin-top: 40px;
+}
+#lead_form label {
+  font-size: var(--font-16);
+}
+#lead_form input,
+#lead_form select,
+#lead_form textarea {
+  width: 100%;
+  border: none;
+  border: 1px solid #d9d9d9;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 15px;
+  font-size: var(--font-16);
+}
+#lead_form .whatsapp_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#lead_form .whatsapp_container .checkbox_container {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  gap: 5px;
+}
+#lead_form .whatsapp_container .checkbox_container label {
+  font-size: 12px;
+}
+#lead_form .whatsapp_container .checkbox_container #whatsapp_checkbox {
+  width: auto;
+  margin: 0;
+  padding: 0;
+}
+#lead_form .policy_container,
+#lead_form .e_com_btc {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-top: 40px;
+}
+#lead_form .policy_container input,
+#lead_form .e_com_btc input {
+  width: auto;
+  margin: 0;
+}
+#lead_form .textareaDiv {
+  grid-area: 2/3/4/4;
+}
+#lead_form .btn_container {
+  display: flex;
+  justify-content: flex-end;
+}
+
 #virtual_factory_experience {
   padding: calc(var(--paddingY) / 2) var(--paddingX);
   background-color: white;
@@ -39,21 +108,59 @@ body {
   z-index: 2;
 }
 #virtual_factory_experience .close_btn {
+  background: none rgb(68, 68, 68);
+  border: 0px;
+  margin: 10px;
+  padding: 0px;
+  text-transform: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   position: absolute;
-  top: 10px;
-  right: 10px;
-  background: #fff;
-  border: none;
-  padding: 6px 12px;
-  font-size: 14px;
-  border-radius: 4px;
   cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  border-radius: 2px;
+  height: 40px;
+  width: 40px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px;
+  overflow: hidden;
+  top: 0px;
+  right: 45px;
   display: none;
-  z-index: 3;
+}
+#virtual_factory_experience .close_btn img {
+  width: 100%;
+  height: 100%;
+  padding: 8px;
+  opacity: 0.8;
+  filter: invert(1);
 }
 
+@media screen and (max-width: 1024px) {
+  #lead_form form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #lead_form .textareaDiv {
+    grid-area: auto;
+  }
+  #lead_form .whatsapp_input {
+    grid-area: 3/1/4/2;
+  }
+  #lead_form .policy_container,
+  #lead_form .e_com_btc {
+    margin: 0;
+  }
+}
 @media screen and (max-width: 768px) {
   #virtual_factory_experience .virtual_container iframe {
     aspect-ratio: 9/16;
+  }
+  #lead_form form {
+    grid-template-columns: 1fr;
+  }
+  #lead_form .whatsapp_input {
+    grid-area: 5/1/6/2;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -200,7 +200,7 @@
 
 
 #faqs {
-  padding: var(--paddingX);
+  padding: var(--paddingY) var(--paddingX);
   position: relative;
   & > img {
     position: absolute;
@@ -263,9 +263,11 @@
   }
 }
 
-
+textarea{
+   resize: none;
+}
 #newsletter {
-  padding: var(--paddingX);
+  padding: var(--paddingY) var(--paddingX);
   position: relative;
   .newsletter_form {
     display: grid;
