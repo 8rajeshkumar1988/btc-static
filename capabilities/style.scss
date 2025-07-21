@@ -1,0 +1,359 @@
+body {
+  background-color: #fffff4;
+}
+
+#vertical_integration {
+  position: relative;
+  padding: var(--paddingY) calc(var(--paddingX) / 2);
+  overflow: hidden;
+  & > img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    z-index: -1;
+    transform: translate(0%, -25%);
+  }
+  .heading {
+    h2 {
+      text-align: center;
+    }
+    p {
+      font-weight: 300;
+      text-transform: none;
+      max-width: 1024px;
+      text-align: center;
+      margin: 0 auto;
+      margin-top: 20px;
+    }
+  }
+  .cards_wrapper {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    justify-content: center;
+    .card {
+      width: calc((100% - var(--paddingX)) / 4);
+      aspect-ratio: 285/351;
+      position: relative;
+      min-width: 280px;
+      &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        background: #0000009d;
+      }
+      & > img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        inset: 0;
+        object-fit: cover;
+      }
+      .card_info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        z-index: 1;
+        height: 100%;
+        padding: 20px;
+        .card_head {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          .icon {
+            width: 35px;
+            aspect-ratio: 1;
+            img {
+              height: 100%;
+              width: 100%;
+              object-fit: contain;
+            }
+          }
+          .title {
+            color: #ffffff;
+            font-size: clamp(1.75rem, 0.7016rem + 1.2903vw, 2.25rem);
+            font-weight: 600;
+          }
+        }
+        .card_body {
+          h3 {
+            color: #ffffff;
+            font-size: clamp(1.75rem, 0.7016rem + 1.2903vw, 2.25rem);
+            font-weight: 600;
+            line-height: 1.2;
+            span {
+              color: var(--green);
+            }
+          }
+          .card_desc {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            /* align-content: center; */
+            justify-content: space-between;
+            margin-top: 15px;
+            P {
+              font-size: var(--font-16);
+              color: #ffffff;
+              width: 35%;
+            }
+            img {
+              width: 50%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#sustainability_details {
+  padding: var(--paddingY) var(--paddingX);
+  background: linear-gradient(180deg, #2f2874 0%, #201a5b 100%);
+  .heading {
+    h2 {
+      color: #ffffff;
+    }
+    margin-bottom: 40px;
+  }
+  .sustainability_info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    p {
+      margin-bottom: 30px;
+    }
+    ul {
+      margin-left: 1.5rem;
+    }
+    p,
+    li {
+      font-size: var(--font-20);
+      color: #ffffff;
+      font-weight: 200;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+    .image_wrapper {
+      position: relative;
+      overflow: hidden;
+      min-height: 350px;
+      img {
+        position: absolute;
+        inset: 0;
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+      }
+    }
+  }
+  .technology_and_innovation {
+    .heading {
+      padding-top: var(--paddingY);
+    }
+    .tai_container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+      align-items: center;
+      .static {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        & > div {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          text-align: center;
+          color: #ffffff;
+          padding: 20px;
+          h3 {
+            color: var(--green);
+            font-size: 40px;
+          }
+        }
+      }
+      .dynamic_desc {
+        p {
+          margin-bottom: 30px;
+        }
+        p,
+        li {
+          font-size: var(--font-20);
+          font-weight: 200;
+          color: #ffffff;
+        }
+        ul {
+          margin-left: 1.5rem;
+          li {
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+#logistics_shipping_efficiency {
+  padding: var(--paddingY) var(--paddingX);
+  // padding-bottom: 0;
+  position: relative;
+  overflow: hidden;
+  & > img:first-child {
+    position: absolute;
+    inset: 0;
+    width: 85%;
+    z-index: -1;
+    transform: translate(-5%, -50%) rotate(-70deg);
+  }
+
+  .logistics_shipping_efficiency_head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .heading {
+      h2 {
+        color: var(--secondaryBlack);
+      }
+      p {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  .logistics_shipping_efficiency_container {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    .category_item {
+      padding: 30px;
+      background-color: #ffffff;
+      h2 {
+        padding-bottom: 20px;
+        line-height: 1;
+        font-size: 30px;
+      }
+      .category_image {
+        width: 100%;
+        aspect-ratio: 324/294;
+        position: relative;
+        overflow: hidden;
+        display: block;
+        & > img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          position: absolute;
+          inset: 0;
+        }
+      }
+      .category_description {
+        margin: 40px 20px;
+        margin-bottom: 0;
+        text-decoration: none;
+        font-size: var(--font-18);
+        font-weight: 300;
+        color: var(--tertiaryBlack);
+        display: block;
+        span {
+          color: black;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #logistics_shipping_efficiency {
+    & > img:first-child {
+      width: 100%;
+      transform: translate(-10%, -50%) rotate(-70deg);
+    }
+    .logistics_shipping_efficiency_container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  #vertical_integration .cards_wrapper .card{
+    width: calc((100% - var(--paddingX)) / 3);
+  }
+}
+@media screen and (max-width: 1024px) {
+  #vertical_integration{
+    & > img{
+      width: 150%;
+    }
+  }
+  #vertical_integration .cards_wrapper .card{
+    width: calc((100% - var(--paddingX)) / 2);
+  }
+  #sustainability_details {
+    .technology_and_innovation {
+      .tai_container {
+        grid-template-columns: 1fr;
+        .static {
+          justify-items: self-start;
+          gap: 30px;
+          & > div {
+            padding: 0px;
+            align-items: flex-start;
+            p {
+              text-align: start;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  #vertical_integration .cards_wrapper .card{
+    width: calc((100% - var(--paddingX)) / 1);
+  }
+  #vertical_integration .cards_wrapper .card .card_info .card_body h3{
+    line-height: 1.3;
+  }
+  #logistics_shipping_efficiency {
+    & > img:first-child {
+      width: 150%;
+      transform: translate(-20%, -50%) rotate(-70deg);
+    }
+    .logistics_shipping_efficiency_container {
+      grid-template-columns: 1fr;
+      .category_item {
+        padding: 20px;
+        .category_description {
+          margin: 30px 20px;
+        }
+      }
+    }
+  }
+  #sustainability_details {
+    .sustainability_info {
+      grid-template-columns: 1fr;
+    }
+    .technology_and_innovation {
+      .tai_container {
+        grid-template-columns: 1fr;
+        .static {
+          grid-template-columns: 1fr;
+          gap: 20px;
+          & > div {
+            padding: 0px;
+            align-items: flex-start;
+            p {
+              text-align: start;
+            }
+          }
+        }
+      }
+    }
+  }
+}

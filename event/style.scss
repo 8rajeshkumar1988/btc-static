@@ -4,14 +4,114 @@ body {
 :root {
   --heading: clamp(2.25rem, 1.875rem + 1.875vw, 4.125rem);
 }
-#event {
-  padding: var(--paddingX);
+
+#upcoming_events{
+  padding: var(--paddingY) var(--paddingX);
+  .heading{
+    h2{
+      color: #000;
+    }
+  }
+}
+
+
+#event_archive {
   background-color: #ffffff;
   .heading {
+    padding: var(--paddingY) var(--paddingX);
+    padding-bottom: 0;
     h2 {
       font-size: var(--heading);
-      span {
-        color: var(--blue);
+      color: #000;
+    }
+  }
+   .event_btc_button_container {
+    padding: 40px var(--paddingX) var(--paddingY) var(--paddingX);
+    display: flex;
+    justify-content: flex-end;
+  }
+  .event_btc_buttons {
+    display: flex;
+    gap: 15px;
+    button {
+      padding: 15px;
+      height: var(--navBtn);
+      width: var(--navBtn);
+      background-color: #d4ff32;
+      border: 0px solid #d9d9d9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        height: 100%;
+        width: 100%;
+        opacity: 1;
+      }
+    }
+    button.swiper-button-disabled {
+      background-color: #e4e4e4;
+      img {
+        opacity: 0.4;
+      }
+    }
+    .event_btc-prev {
+      img {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  .event_btc_container {
+    margin-top: 40px;
+
+    .event_btc {
+      padding: 0 var(--paddingX);
+      .event_item {
+        // width: calc((100% - (var(--paddingX) * 2)) / 3);
+        min-width: 320px  ;
+        .event_image {
+          width: 100%;
+          aspect-ratio: 341/194;
+          position: relative;
+          overflow: hidden;
+          display: block;
+          & > img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            inset: 0;
+          }
+         
+        }
+        .event_description {
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+          margin-top: 20px;
+          h2{
+            font-size: var(--font-20);
+            font-weight: 500;
+            color: var(--secondaryBlack);
+          }
+          .event_date,.event_location{
+            & > img{
+              width: 30px;
+              height: 30px;
+              aspect-ratio: 1;
+              margin-right: 10px
+            }
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: var(--font-18);
+            color: var(--secondaryBlack);
+            font-weight: 400;
+          }
+          .cta{
+            padding: 10px 20px;
+            font-size: 16px;
+          }
+        }
       }
     }
   }

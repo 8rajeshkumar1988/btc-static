@@ -8,8 +8,8 @@ body {
   position: relative;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  padding: var(--paddingX);
-  gap: clamp(3.25rem, -55.4597rem + 72.2581vw, 31.25rem);
+  padding: var(--paddingY) var(--paddingX);
+  gap:clamp(2.5rem, -2.7419rem + 6.4516vw, 5rem);
   & > img {
     position: absolute;
     inset: 0;

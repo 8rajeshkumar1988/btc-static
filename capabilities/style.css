@@ -1,0 +1,336 @@
+body {
+  background-color: #fffff4;
+}
+
+#vertical_integration {
+  position: relative;
+  padding: var(--paddingY) calc(var(--paddingX) / 2);
+  overflow: hidden;
+}
+#vertical_integration > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  z-index: -1;
+  transform: translate(0%, -25%);
+}
+#vertical_integration .heading h2 {
+  text-align: center;
+}
+#vertical_integration .heading p {
+  font-weight: 300;
+  text-transform: none;
+  max-width: 1024px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+#vertical_integration .cards_wrapper {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  justify-content: center;
+}
+#vertical_integration .cards_wrapper .card {
+  width: calc((100% - var(--paddingX)) / 4);
+  aspect-ratio: 285/351;
+  position: relative;
+  min-width: 280px;
+}
+#vertical_integration .cards_wrapper .card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6156862745);
+}
+#vertical_integration .cards_wrapper .card > img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#vertical_integration .cards_wrapper .card .card_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  padding: 20px;
+}
+#vertical_integration .cards_wrapper .card .card_info .card_head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#vertical_integration .cards_wrapper .card .card_info .card_head .icon {
+  width: 35px;
+  aspect-ratio: 1;
+}
+#vertical_integration .cards_wrapper .card .card_info .card_head .icon img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+#vertical_integration .cards_wrapper .card .card_info .card_head .title {
+  color: #ffffff;
+  font-size: clamp(1.75rem, 0.7016rem + 1.2903vw, 2.25rem);
+  font-weight: 600;
+}
+#vertical_integration .cards_wrapper .card .card_info .card_body h3 {
+  color: #ffffff;
+  font-size: clamp(1.75rem, 0.7016rem + 1.2903vw, 2.25rem);
+  font-weight: 600;
+  line-height: 1.2;
+}
+#vertical_integration .cards_wrapper .card .card_info .card_body h3 span {
+  color: var(--green);
+}
+#vertical_integration .cards_wrapper .card .card_info .card_body .card_desc {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  /* align-content: center; */
+  justify-content: space-between;
+  margin-top: 15px;
+}
+#vertical_integration .cards_wrapper .card .card_info .card_body .card_desc P {
+  font-size: var(--font-16);
+  color: #ffffff;
+  width: 35%;
+}
+#vertical_integration .cards_wrapper .card .card_info .card_body .card_desc img {
+  width: 50%;
+}
+
+#sustainability_details {
+  padding: var(--paddingY) var(--paddingX);
+  background: linear-gradient(180deg, #2f2874 0%, #201a5b 100%);
+}
+#sustainability_details .heading {
+  margin-bottom: 40px;
+}
+#sustainability_details .heading h2 {
+  color: #ffffff;
+}
+#sustainability_details .sustainability_info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+#sustainability_details .sustainability_info p {
+  margin-bottom: 30px;
+}
+#sustainability_details .sustainability_info ul {
+  margin-left: 1.5rem;
+}
+#sustainability_details .sustainability_info p,
+#sustainability_details .sustainability_info li {
+  font-size: var(--font-20);
+  color: #ffffff;
+  font-weight: 200;
+}
+#sustainability_details .sustainability_info li {
+  margin-bottom: 10px;
+}
+#sustainability_details .sustainability_info .image_wrapper {
+  position: relative;
+  overflow: hidden;
+  min-height: 350px;
+}
+#sustainability_details .sustainability_info .image_wrapper img {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+#sustainability_details .technology_and_innovation .heading {
+  padding-top: var(--paddingY);
+}
+#sustainability_details .technology_and_innovation .tai_container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  align-items: center;
+}
+#sustainability_details .technology_and_innovation .tai_container .static {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+#sustainability_details .technology_and_innovation .tai_container .static > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+  color: #ffffff;
+  padding: 20px;
+}
+#sustainability_details .technology_and_innovation .tai_container .static > div h3 {
+  color: var(--green);
+  font-size: 40px;
+}
+#sustainability_details .technology_and_innovation .tai_container .dynamic_desc p {
+  margin-bottom: 30px;
+}
+#sustainability_details .technology_and_innovation .tai_container .dynamic_desc p,
+#sustainability_details .technology_and_innovation .tai_container .dynamic_desc li {
+  font-size: var(--font-20);
+  font-weight: 200;
+  color: #ffffff;
+}
+#sustainability_details .technology_and_innovation .tai_container .dynamic_desc ul {
+  margin-left: 1.5rem;
+}
+#sustainability_details .technology_and_innovation .tai_container .dynamic_desc ul li {
+  margin-bottom: 10px;
+}
+
+#logistics_shipping_efficiency {
+  padding: var(--paddingY) var(--paddingX);
+  position: relative;
+  overflow: hidden;
+}
+#logistics_shipping_efficiency > img:first-child {
+  position: absolute;
+  inset: 0;
+  width: 85%;
+  z-index: -1;
+  transform: translate(-5%, -50%) rotate(-70deg);
+}
+#logistics_shipping_efficiency .logistics_shipping_efficiency_head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#logistics_shipping_efficiency .logistics_shipping_efficiency_head .heading h2 {
+  color: var(--secondaryBlack);
+}
+#logistics_shipping_efficiency .logistics_shipping_efficiency_head .heading p {
+  margin-top: 20px;
+}
+#logistics_shipping_efficiency .logistics_shipping_efficiency_container {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+#logistics_shipping_efficiency .logistics_shipping_efficiency_container .category_item {
+  padding: 30px;
+  background-color: #ffffff;
+}
+#logistics_shipping_efficiency .logistics_shipping_efficiency_container .category_item h2 {
+  padding-bottom: 20px;
+  line-height: 1;
+  font-size: 30px;
+}
+#logistics_shipping_efficiency .logistics_shipping_efficiency_container .category_item .category_image {
+  width: 100%;
+  aspect-ratio: 324/294;
+  position: relative;
+  overflow: hidden;
+  display: block;
+}
+#logistics_shipping_efficiency .logistics_shipping_efficiency_container .category_item .category_image > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  inset: 0;
+}
+#logistics_shipping_efficiency .logistics_shipping_efficiency_container .category_item .category_description {
+  margin: 40px 20px;
+  margin-bottom: 0;
+  text-decoration: none;
+  font-size: var(--font-18);
+  font-weight: 300;
+  color: var(--tertiaryBlack);
+  display: block;
+}
+#logistics_shipping_efficiency .logistics_shipping_efficiency_container .category_item .category_description span {
+  color: black;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 1200px) {
+  #logistics_shipping_efficiency > img:first-child {
+    width: 100%;
+    transform: translate(-10%, -50%) rotate(-70deg);
+  }
+  #logistics_shipping_efficiency .logistics_shipping_efficiency_container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #vertical_integration .cards_wrapper .card {
+    width: calc((100% - var(--paddingX)) / 3);
+  }
+}
+@media screen and (max-width: 1024px) {
+  #vertical_integration > img {
+    width: 150%;
+  }
+  #vertical_integration .cards_wrapper .card {
+    width: calc((100% - var(--paddingX)) / 2);
+  }
+  #sustainability_details .technology_and_innovation .tai_container {
+    grid-template-columns: 1fr;
+  }
+  #sustainability_details .technology_and_innovation .tai_container .static {
+    justify-items: self-start;
+    gap: 30px;
+  }
+  #sustainability_details .technology_and_innovation .tai_container .static > div {
+    padding: 0px;
+    align-items: flex-start;
+  }
+  #sustainability_details .technology_and_innovation .tai_container .static > div p {
+    text-align: start;
+  }
+}
+@media screen and (max-width: 768px) {
+  #vertical_integration .cards_wrapper .card {
+    width: calc((100% - var(--paddingX)) / 1);
+  }
+  #vertical_integration .cards_wrapper .card .card_info .card_body h3 {
+    line-height: 1.3;
+  }
+  #logistics_shipping_efficiency > img:first-child {
+    width: 150%;
+    transform: translate(-20%, -50%) rotate(-70deg);
+  }
+  #logistics_shipping_efficiency .logistics_shipping_efficiency_container {
+    grid-template-columns: 1fr;
+  }
+  #logistics_shipping_efficiency .logistics_shipping_efficiency_container .category_item {
+    padding: 20px;
+  }
+  #logistics_shipping_efficiency .logistics_shipping_efficiency_container .category_item .category_description {
+    margin: 30px 20px;
+  }
+  #sustainability_details .sustainability_info {
+    grid-template-columns: 1fr;
+  }
+  #sustainability_details .technology_and_innovation .tai_container {
+    grid-template-columns: 1fr;
+  }
+  #sustainability_details .technology_and_innovation .tai_container .static {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  #sustainability_details .technology_and_innovation .tai_container .static > div {
+    padding: 0px;
+    align-items: flex-start;
+  }
+  #sustainability_details .technology_and_innovation .tai_container .static > div p {
+    text-align: start;
+  }
+}/*# sourceMappingURL=style.css.map */
